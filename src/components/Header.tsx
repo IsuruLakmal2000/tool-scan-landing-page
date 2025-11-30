@@ -2,11 +2,18 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import SmartDownloadButton from './SmartDownloadButton';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+        return () => setMounted(false);
+    }, []);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -60,19 +67,20 @@ export default function Header() {
                     <span className="hamburger-line"></span>
                 </button>
 
-                {/* Mobile Navigation Overlay */}
-                {isMenuOpen && (
+                {/* Mobile Navigation Overlay - Rendered via Portal */}
+                {mounted && isMenuOpen && createPortal(
                     <div className="mobile-nav-overlay">
-                        <nav>
+                        <nav className="mobile-nav-drawer">
                             <ul className="mobile-nav-list">
                                 <li><Link href="/" onClick={closeMenu} className="mobile-nav-link">Home</Link></li>
                                 <li><Link href="/blog" onClick={closeMenu} className="mobile-nav-link">Blog</Link></li>
-                                <li onClick={closeMenu}>
+                                <li onClick={closeMenu} style={{ width: '100%', marginTop: '16px' }}>
                                     <SmartDownloadButton />
                                 </li>
                             </ul>
                         </nav>
-                    </div>
+                    </div>,
+                    document.body
                 )}
             </div>
         </header>
