@@ -13,9 +13,19 @@ export async function generateMetadata({ params }: PageProps) {
     if (!post) return { title: 'Post Not Found' };
 
     return {
-        title: `${post.title} - ToolScan Blog`,
+        title: post.title,
         description: post.excerpt,
-        keywords: post.keywords
+        keywords: post.keywords,
+        alternates: {
+            canonical: `/blog/${slug}`,
+        },
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            type: 'article',
+            publishedTime: new Date(post.date).toISOString(),
+            authors: [post.author],
+        },
     };
 }
 
@@ -29,8 +39,25 @@ export default async function BlogPost({ params }: PageProps) {
 
     const relatedPosts = blogPosts.filter(p => post.relatedPostIds.includes(p.id));
 
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: new Date(post.date).toISOString(),
+        author: {
+            '@type': 'Person',
+            name: post.author,
+        },
+        url: `https://www.toolidentification.app/blog/${slug}`,
+    };
+
     return (
         <div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <article className="container" style={{ padding: '120px 20px 60px', maxWidth: '800px' }}>
                 <Link href="/blog" style={{ textDecoration: 'none', color: '#666', fontSize: '14px', marginBottom: '24px', display: 'inline-block' }}>
                     ← Back to Blog
