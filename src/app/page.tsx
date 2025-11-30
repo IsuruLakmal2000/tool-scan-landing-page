@@ -159,7 +159,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section" style={{ backgroundColor: '#000', color: 'white', textAlign: 'center' }}>
+      <section id="download" className="section" style={{ backgroundColor: '#000', color: 'white', textAlign: 'center' }}>
         <div className="container">
           <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px', letterSpacing: '-0.02em' }}>
             Ready to Upgrade Your Toolbox?
