@@ -8,32 +8,21 @@ export default function Home() {
       {/* Hero Section */}
       <section className="section" style={{ paddingTop: '140px', paddingBottom: '140px', textAlign: 'center', overflow: 'hidden' }}>
         <div className="container">
-          <h1 className="animate-fade-in-up" style={{ fontSize: '64px', fontWeight: '800', marginBottom: '24px', lineHeight: '1.05', letterSpacing: '-0.03em', color: '#000' }}>
+          <h1 className="animate-fade-in-up hero-title">
             Identify Tools Instantly <br />
             <span style={{ color: '#666' }}>with AI Precision</span>
           </h1>
-          <p className="animate-fade-in-up delay-100" style={{ fontSize: '22px', color: '#666', maxWidth: '640px', margin: '0 auto 48px', lineHeight: '1.5', fontWeight: 400 }}>
+          <p className="animate-fade-in-up delay-100 hero-subtitle">
             Discover, recognize, and learn about hand tools instantly. Your personal workshop assistant in your pocket.
           </p>
-          <div className="animate-fade-in-up delay-200" style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+          <div className="animate-fade-in-up delay-200" style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <StoreButton store="app-store" href="https://apps.apple.com/lk/app/toolscan-tool-identifier/id6751974282" />
             <StoreButton store="play-store" variant="light" href="https://play.google.com/store/apps/details?id=com.circular.tool_identifier_app&hl=en" />
           </div>
 
-          <div className="animate-scale-in delay-300" style={{ marginTop: '100px', position: 'relative', height: '600px', display: 'flex', justifyContent: 'center', gap: '40px' }}>
+          <div className="animate-scale-in delay-300 hero-phones-container">
             {/* Phone 1 (Left) */}
-            <div style={{
-              width: '300px',
-              height: '600px',
-              backgroundColor: '#fff',
-              borderRadius: '40px',
-              border: '12px solid #000',
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-              overflow: 'hidden',
-              position: 'relative',
-              transform: 'translateY(20px) rotate(-6deg)',
-              zIndex: 1
-            }}>
+            <div className="hero-phone hero-phone-1">
               {/* Notch */}
               <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '120px', height: '30px', backgroundColor: '#000', borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px', zIndex: 2 }}></div>
               {/* Screen Content */}
@@ -43,18 +32,7 @@ export default function Home() {
             </div>
 
             {/* Phone 2 (Right) */}
-            <div style={{
-              width: '300px',
-              height: '600px',
-              backgroundColor: '#fff',
-              borderRadius: '40px',
-              border: '12px solid #000',
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-              overflow: 'hidden',
-              position: 'relative',
-              transform: 'translateY(-20px) rotate(6deg)',
-              zIndex: 2
-            }}>
+            <div className="hero-phone hero-phone-2">
               {/* Notch */}
               <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '120px', height: '30px', backgroundColor: '#000', borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px', zIndex: 2 }}></div>
               {/* Screen Content */}
