@@ -15,6 +15,49 @@ export default function Home() {
           <p className="animate-fade-in-up delay-100 hero-subtitle">
             Discover, recognize, and learn about hand tools instantly. Your personal workshop assistant in your pocket.
           </p>
+
+          {/* Social Proof */}
+          <div className="animate-fade-in-up delay-200" style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '32px',
+            marginBottom: '40px',
+            flexWrap: 'wrap'
+          }}>
+            {/* App Store Rating */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontWeight: '700', fontSize: '18px' }}>
+                  <StarIcon /> 4.8
+                </div>
+                <div style={{ fontSize: '14px', color: '#666' }}>App Store</div>
+                <div style={{ fontSize: '12px', color: '#888' }}>100 + ratings</div>
+              </div>
+            </div>
+
+            {/* Google Play Rating */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontWeight: '700', fontSize: '18px' }}>
+                  <StarIcon /> 4.7
+                </div>
+                <div style={{ fontSize: '14px', color: '#666' }}>Google Play</div>
+                <div style={{ fontSize: '12px', color: '#888' }}>100 + ratings</div>
+              </div>
+            </div>
+
+            {/* Users Count */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '14px', color: '#444' }}>
+                  <UserIcon /> Loved by
+                </div>
+                <div style={{ fontSize: '18px', fontWeight: '800' }}>1k users</div>
+                <div style={{ fontSize: '14px', color: '#666' }}>users</div>
+              </div>
+            </div>
+          </div>
+
           <div className="animate-fade-in-up delay-200" style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <StoreButton store="app-store" href="https://apps.apple.com/lk/app/toolscan-tool-identifier/id6751974282" />
             <StoreButton store="play-store" variant="light" href="https://play.google.com/store/apps/details?id=com.circular.tool_identifier_app&hl=en" />
@@ -394,6 +437,14 @@ function SmileIcon() {
       <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
       <line x1="9" y1="9" x2="9.01" y2="9"></line>
       <line x1="15" y1="9" x2="15.01" y2="9"></line>
+    </svg>
+  );
+}
+
+function StarIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style={{ color: '#FFD700' }}>
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
     </svg>
   );
 }
