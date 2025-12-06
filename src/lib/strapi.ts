@@ -8,7 +8,7 @@ export interface StrapiBlogPost {
     title: string;
     slug: string;
     excerpt: string;
-    content: string; // content is now stored as Rich Text (Markdown) which returns a string
+    content: any; // content is a dynamic JSON block
     date: string;
     author: string;
     keywords: string[]; // JSON field in Strapi comes as parsed JSON usually, or logic needed
