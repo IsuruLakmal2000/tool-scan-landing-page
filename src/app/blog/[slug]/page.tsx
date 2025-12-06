@@ -1,6 +1,5 @@
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
 import Link from "next/link";
+import { marked } from 'marked';
 import { notFound } from "next/navigation";
 import StoreButton from "@/components/StoreButton";
 import { getBlogPostBySlug, getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
@@ -81,14 +80,13 @@ export default async function BlogPost({ params }: PageProps) {
                 </div>
 
 
+
+
                 <div
                     style={{ fontSize: '18px', lineHeight: '1.8', color: '#333' }}
                     className="strapi-content markdown-body"
-                >
-                    <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-                        {post.content}
-                    </ReactMarkdown>
-                </div>
+                    dangerouslySetInnerHTML={{ __html: post.content ? await marked.parse(post.content) : '' }}
+                />
 
                 <div style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid #eee' }}>
                     <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px' }}>Ready to identify your tools?</h3>
