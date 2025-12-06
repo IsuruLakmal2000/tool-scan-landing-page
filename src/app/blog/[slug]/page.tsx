@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import StoreButton from "@/components/StoreButton";
 import { getBlogPostBySlug, getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
+import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -78,10 +79,13 @@ export default async function BlogPost({ params }: PageProps) {
                     <span>{post.author}</span>
                 </div>
 
+
                 <div
                     style={{ fontSize: '18px', lineHeight: '1.8', color: '#333' }}
-                    dangerouslySetInnerHTML={{ __html: post.content }}
-                />
+                    className="strapi-content"
+                >
+                    <BlocksRenderer content={post.content} />
+                </div>
 
                 <div style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid #eee' }}>
                     <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px' }}>Ready to identify your tools?</h3>

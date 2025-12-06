@@ -97,4 +97,57 @@ If you stopped the server or are coming back later:
     *   **Render / Railway / Heroku**: Good alternatives for hosting Node.js apps.
     *   **DigitalOcean / VPS**: For full control.
 
-Once deployed, remember to update `NEXT_PUBLIC_STRAPI_URL` in your Vercel (or other host) environment variables to point to your **live** Strapi URL, not localhost.
+### Important: Separate Git Repository
+
+**The error "Strapi was not found in the project dependencies" means you are trying to deploy this Next.js repository as a Strapi app.**
+
+1.  Your Strapi backend is a **separate project** (the folder you created with `npx create-strapi-app`).
+2.  It needs its **own separate Git repository**.
+3.  **Do not** try to connect your Next.js repo (`tool-scan-landing-page`) to Strapi Cloud.
+4.  Instead:
+    *   Initialize git inside your Strapi folder: `cd my-strapi-project && git init`.
+    *   Commit those files.
+    *   Push to a **new** GitHub repository (e.g., `tool-scan-backend`).
+    *   Connect **that** new repository to Strapi Cloud.
+
+    *   Connect **that** new repository to Strapi Cloud.
+
+## 10. Connect Next.js to Deployed Strapi
+
+Once your Strapi project is live on the cloud:
+
+## 10. Connect Next.js to Deployed Strapi
+
+Once your Strapi project is live on the cloud:
+
+1.  **Get the URL**: Copy the URL of your live Strapi project (e.g., `https://plankton-app-12345.strapi.app`) and your **API Token**.
+
+2.  **Add Variables to Vercel**:
+    1.  Go to your [Vercel Dashboard](https://vercel.com/dashboard).
+    2.  Select your project (`tool-scan-landing-page`).
+    3.  Click on the **Settings** tab (top menu).
+    4.  Click on **Environment Variables** (left sidebar).
+    5.  Add the first variable:
+        *   **Key**: `NEXT_PUBLIC_STRAPI_URL`
+        *   **Value**: `https://your-app-name.strapi.app` (Your actual Strapi URL)
+        *   Click **Save**.
+    6.  Add the second variable:
+        *   **Key**: `STRAPI_API_TOKEN`
+        *   **Value**: `your-api-token` (The token you generated in Strapi Admin)
+        *   Click **Save**.
+
+3.  **Redeploy**:
+    *   Go to the **Deployments** tab.
+    *   Click the three dots (**...**) next to your latest deployment.
+    *   Select **Redeploy**.
+    *   This ensures the new variables are picked up by the build.
+
+## 11. Content Migration
+
+**Important**: Your local blog posts will **NOT** automatically appear on the production server. The database is not part of git.
+
+*   **Option A (Manual)**: Log in to your live Strapi Admin and copy-paste the content again.
+*   **Option B (Transfer Feature)**: Use Strapi's [Transfer](https://docs.strapi.io/dev-docs/data-management/transfer) feature to push your local data to the cloud.
+    ```bash
+    npm run strapi transfer -- --to https://your-app.strapi.app/admin --to-token your-transfer-token
+    ```
