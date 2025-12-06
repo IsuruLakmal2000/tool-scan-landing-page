@@ -29,7 +29,7 @@ Complete the form to create your key administrator account.
 | `title` | Text (Short text) | Required |
 | `slug` | UID | Attached field: `title` (Required) |
 | `excerpt` | Text (Long text) | Required |
-| `content` | Rich Text | Required |
+| `content` | Rich Text (Markdown) | Required |
 | `date` | Date | Type: date (Required) |
 | `author` | Text (Short text) | Default value: `ToolScan Team` |
 | `keywords` | JSON | (To store array of strings) |

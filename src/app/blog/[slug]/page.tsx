@@ -1,8 +1,9 @@
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import StoreButton from "@/components/StoreButton";
 import { getBlogPostBySlug, getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
-import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -82,9 +83,11 @@ export default async function BlogPost({ params }: PageProps) {
 
                 <div
                     style={{ fontSize: '18px', lineHeight: '1.8', color: '#333' }}
-                    className="strapi-content"
+                    className="strapi-content markdown-body"
                 >
-                    <BlocksRenderer content={post.content} />
+                    <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                        {post.content}
+                    </ReactMarkdown>
                 </div>
 
                 <div style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid #eee' }}>
