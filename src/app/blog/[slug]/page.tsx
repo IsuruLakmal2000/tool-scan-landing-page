@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogPosts } from "@/data/blogPosts";
 import StoreButton from "@/components/StoreButton";
+import { getBlogPostBySlug, getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -9,7 +9,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps) {
     const { slug } = await params;
-    const post = blogPosts.find((p) => p.slug === slug);
+    const post = await getBlogPostBySlug(slug);
     if (!post) return { title: 'Post Not Found' };
 
     return {
@@ -31,13 +31,18 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function BlogPost({ params }: PageProps) {
     const { slug } = await params;
-    const post = blogPosts.find((p) => p.slug === slug);
+    const post = await getBlogPostBySlug(slug);
 
     if (!post) {
         notFound();
     }
 
-    const relatedPosts = blogPosts.filter(p => post.relatedPostIds.includes(p.id));
+    // Fetch all posts to find related ones. 
+    // Ideally usage a backend filter if relation is stored in Strapi, but manual filtering 
+    // based on the ID array approach from original code is preserved here for now if 'relatedPostIds' exists.
+    // If 'relatedPostIds' is an array of IDs from Strapi:
+    const allPosts = await getBlogPosts();
+    const relatedPosts = allPosts.filter((p: StrapiBlogPost) => post.relatedPostIds?.includes(p.id));
 
     const jsonLd = {
         '@context': 'https://schema.org',
@@ -92,7 +97,7 @@ export default async function BlogPost({ params }: PageProps) {
                     <div className="container">
                         <h3 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '40px' }}>Related Articles</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-                            {relatedPosts.map(related => (
+                            {relatedPosts.map((related: StrapiBlogPost) => (
                                 <Link key={related.id} href={`/blog/${related.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                     <div style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '16px', border: '1px solid #eee', height: '100%', transition: 'transform 0.2s' }}>
                                         <h4 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '12px' }}>{related.title}</h4>
@@ -104,6 +109,7 @@ export default async function BlogPost({ params }: PageProps) {
                     </div>
                 </section>
             )}
+
         </div>
     );
 }

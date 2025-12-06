@@ -1,7 +1,16 @@
 import Link from "next/link";
-import { blogPosts } from "@/data/blogPosts";
+import { getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
 
-export default function BlogListing() {
+export const dynamic = 'force-dynamic'; // Prevent static caching to ensure new posts appear
+
+export default async function BlogListing() {
+    let posts: StrapiBlogPost[] = [];
+    try {
+        posts = await getBlogPosts();
+    } catch (error) {
+        console.error("Failed to fetch posts:", error);
+    }
+
     return (
         <div className="container" style={{ padding: '120px 20px 60px' }}>
             <div style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -16,7 +25,7 @@ export default function BlogListing() {
                 gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
                 gap: '40px'
             }}>
-                {blogPosts.map((post) => (
+                {posts.map((post) => (
                     <article key={post.id} style={{
                         border: '1px solid #eee',
                         borderRadius: '16px',
