@@ -1,16 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import StoreButton from "@/components/StoreButton";
-import { getBlogPostBySlug, getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
-import { BlocksRenderer } from '@strapi/blocks-react-renderer';
+import { blogPosts, BlogPost } from "@/data/blogPosts"; // Import local data
 
 interface PageProps {
-    params: Promise<{ slug: string }>;
+    params: { slug: string };
 }
 
 export async function generateMetadata({ params }: PageProps) {
-    const { slug } = await params;
-    const post = await getBlogPostBySlug(slug);
+    const { slug } = params;
+    const post = blogPosts.find(p => p.slug === slug);
     if (!post) return { title: 'Post Not Found' };
 
     return {
@@ -30,20 +29,17 @@ export async function generateMetadata({ params }: PageProps) {
     };
 }
 
-export default async function BlogPost({ params }: PageProps) {
-    const { slug } = await params;
-    const post = await getBlogPostBySlug(slug);
+export default function BlogPost({ params }: PageProps) {
+    const { slug } = params;
+    const post = blogPosts.find(p => p.slug === slug);
 
     if (!post) {
         notFound();
     }
 
-    // Fetch all posts to find related ones. 
-    // Ideally usage a backend filter if relation is stored in Strapi, but manual filtering 
-    // based on the ID array approach from original code is preserved here for now if 'relatedPostIds' exists.
-    // If 'relatedPostIds' is an array of IDs from Strapi:
-    const allPosts = await getBlogPosts();
-    const relatedPosts = allPosts.filter((p: StrapiBlogPost) => post.relatedPostIds?.includes(p.id));
+    const relatedPosts = post.relatedPostIds
+        ? blogPosts.filter(p => post.relatedPostIds.includes(p.id))
+        : [];
 
     const jsonLd = {
         '@context': 'https://schema.org',
@@ -79,15 +75,11 @@ export default async function BlogPost({ params }: PageProps) {
                     <span>{post.author}</span>
                 </div>
 
-
-
-
                 <div
                     style={{ fontSize: '18px', lineHeight: '1.8', color: '#333' }}
-                    className="strapi-content"
-                >
-                    <BlocksRenderer content={post.content} />
-                </div>
+                    className="blog-content"
+                    dangerouslySetInnerHTML={{ __html: post.content }}
+                />
 
                 <div style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid #eee' }}>
                     <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px' }}>Ready to identify your tools?</h3>
@@ -103,7 +95,7 @@ export default async function BlogPost({ params }: PageProps) {
                     <div className="container">
                         <h3 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '40px' }}>Related Articles</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-                            {relatedPosts.map((related: StrapiBlogPost) => (
+                            {relatedPosts.map((related: BlogPost) => (
                                 <Link key={related.id} href={`/blog/${related.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                     <div style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '16px', border: '1px solid #eee', height: '100%', transition: 'transform 0.2s' }}>
                                         <h4 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '12px' }}>{related.title}</h4>
