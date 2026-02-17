@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
         id: '1',
         slug: 'identifying-antique-hand-tools',
         title: 'The Ultimate Guide to Identifying Antique Hand Tools',
-        excerpt: 'Discover the secrets to recognizing valuable vintage tools, understanding their history, and determining their worth in today\'s market.',
+        excerpt: 'Discover the secrets to recognizing valuable vintage tools, understanding their history, and determining their worth in today's market.',
         date: 'October 15, 2023',
         author: 'ToolScan Team',
         keywords: ['antique tools', 'vintage hand tools', 'tool identification', 'collectible tools', 'woodworking history'],
@@ -25,7 +25,6 @@ export const blogPosts: BlogPost[] = [
 
       <h2>1. Look for Maker's Marks</h2>
       <p>The first and most reliable way to identify a tool is to find the maker's mark or logo. Manufacturers often stamped their names, locations, and sometimes patent dates into the metal or wood. Common places to look include:</p>
-      <ul>
         <li>The blade or iron of a plane or chisel.</li>
         <li>The metal shank of a screwdriver.</li>
         <li>The wooden handle or tote.</li>
@@ -215,6 +214,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Conclusion</h2>
       <p>The future isn't Digital OR Analog; it's Digital AND Analog. The workshop of the future uses the best tool for the job, whether that tool has a microchip or a wooden handle.</p>
     `
+    },
     {
         id: '6',
         slug: 'how-toolscan-uses-ai-identify-hand-tools',
