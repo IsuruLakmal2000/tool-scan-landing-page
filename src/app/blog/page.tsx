@@ -1,15 +1,8 @@
 import Link from "next/link";
-import { getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
+import { blogPosts } from "@/data/blogPosts";
 
-export const dynamic = 'force-dynamic'; // Prevent static caching to ensure new posts appear
-
-export default async function BlogListing() {
-    let posts: StrapiBlogPost[] = [];
-    try {
-        posts = await getBlogPosts();
-    } catch (error) {
-        console.error("Failed to fetch posts:", error);
-    }
+export default function BlogListing() {
+    const posts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return (
         <div className="container" style={{ padding: '120px 20px 60px' }}>

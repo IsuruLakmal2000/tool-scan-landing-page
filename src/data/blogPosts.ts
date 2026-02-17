@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
         id: '1',
         slug: 'identifying-antique-hand-tools',
         title: 'The Ultimate Guide to Identifying Antique Hand Tools',
-        excerpt: 'Discover the secrets to recognizing valuable vintage tools, understanding their history, and determining their worth in today\'s market.',
+        excerpt: "Discover the secrets to recognizing valuable vintage tools, understanding their history, and determining their worth in today's market.",
         date: 'October 15, 2023',
         author: 'ToolScan Team',
         keywords: ['antique tools', 'vintage hand tools', 'tool identification', 'collectible tools', 'woodworking history'],
@@ -25,7 +25,6 @@ export const blogPosts: BlogPost[] = [
 
       <h2>1. Look for Maker's Marks</h2>
       <p>The first and most reliable way to identify a tool is to find the maker's mark or logo. Manufacturers often stamped their names, locations, and sometimes patent dates into the metal or wood. Common places to look include:</p>
-      <ul>
         <li>The blade or iron of a plane or chisel.</li>
         <li>The metal shank of a screwdriver.</li>
         <li>The wooden handle or tote.</li>
@@ -214,6 +213,51 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Conclusion</h2>
       <p>The future isn't Digital OR Analog; it's Digital AND Analog. The workshop of the future uses the best tool for the job, whether that tool has a microchip or a wooden handle.</p>
+    `
+    },
+    {
+        id: '6',
+        slug: 'how-toolscan-uses-ai-identify-hand-tools',
+        title: 'How ToolScan Uses AI to Identify Hand Tools in Seconds',
+        excerpt: 'Discover how ToolScan’s AI-powered tool recognition helps DIYers identify tools instantly, with practical tips for safer, smarter projects.',
+        date: 'February 15, 2024',
+        author: 'Dew (Intern)',
+        keywords: ['AI tool identifier', 'identify hand tools', 'tool recognition app', 'DIY tool guide', 'tool safety tips'],
+        relatedPostIds: ['2', '5'],
+        content: `
+      <p>Ever found a strange-looking tool in your garage or at a flea market and wondered, "What on earth is this?" You're not alone. For DIY enthusiasts, antique collectors, and even new homeowners, identifying hand tools can be a challenge. Enter <strong>ToolScan</strong>, the AI-powered assistant that fits in your pocket.</p>
+
+      <h2>The Problem: "What Is This Tool?"</h2>
+      <p>Tools are often inherited, bought in mixed lots, or simply forgotten in a drawer. Without a label or manual, using the wrong tool for a job can damage your project or, worse, cause injury. Traditional searching involves guessing keywords like "metal thing with two handles," which rarely works.</p>
+
+      <h2>How ToolScan Solves It with AI</h2>
+      <p>ToolScan uses advanced computer vision technology—similar to how self-driving cars "see" the road. When you snap a photo, our AI analyzes:</p>
+      <ul>
+        <li><strong>Shape & Silhouette:</strong> Distinguishing a pipe wrench from an adjustable wrench.</li>
+        <li><strong>Key Features:</strong> Detecting teeth, blades, handles, and adjustment mechanisms.</li>
+        <li><strong>Context:</strong> Using visual cues to determine if it's a woodworking, plumbing, or automotive tool.</li>
+      </ul>
+      <p>In seconds, it matches your photo against a vast database of thousands of tools to give you an accurate result.</p>
+
+      <h2>Step-by-Step: How to Use It</h2>
+      <ol>
+        <li><strong>Open the App:</strong> Launch ToolScan on your phone.</li>
+        <li><strong>Point & Shoot:</strong> Place the tool on a clear surface with good lighting. Avoid cluttered backgrounds for the best accuracy.</li>
+        <li><strong>Get Insights:</strong> Instantly see the tool's name, its primary function, and safety tips.</li>
+      </ol>
+
+      <h2>Real-World Examples</h2>
+      <p>Imagine you find a <em>basin wrench</em> under the sink. It looks weird—like a claw on a long stick. ToolScan identifies it instantly and tells you: "Used for tightening nuts under sinks in tight spaces." Suddenly, your plumbing repair just got easier.</p>
+
+      <h2>Safety First</h2>
+      <p>Knowing what a tool is is the first step to safety. ToolScan doesn't just name the tool; it provides:</p>
+      <ul>
+        <li><strong>Safety Gear Recommendations:</strong> "Wear safety glasses" for impact tools.</li>
+        <li><strong>Usage Warnings:</strong> "Do not use on live electrical circuits" for non-insulated pliers.</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Don't let mystery tools slow down your projects. With ToolScan, you have a master craftsman's knowledge right in your pocket. Download it today and start exploring your toolbox with confidence.</p>
     `
     }
 ];
