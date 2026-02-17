@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
         id: '1',
         slug: 'identifying-antique-hand-tools',
         title: 'The Ultimate Guide to Identifying Antique Hand Tools',
-        excerpt: 'Discover the secrets to recognizing valuable vintage tools, understanding their history, and determining their worth in today's market.',
+        excerpt: "Discover the secrets to recognizing valuable vintage tools, understanding their history, and determining their worth in today's market.",
         date: 'October 15, 2023',
         author: 'ToolScan Team',
         keywords: ['antique tools', 'vintage hand tools', 'tool identification', 'collectible tools', 'woodworking history'],
