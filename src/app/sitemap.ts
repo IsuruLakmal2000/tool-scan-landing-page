@@ -1,12 +1,19 @@
 import { MetadataRoute } from 'next'
-import { blogPosts } from '@/data/blogPosts'
+import { getBlogPosts } from '@/lib/strapi'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://www.toolidentification.app'
 
-    const postEntries = blogPosts.map((post) => ({
+    let posts = [];
+    try {
+        posts = await getBlogPosts();
+    } catch (error) {
+        console.error("Failed to fetch posts for sitemap:", error);
+    }
+
+    const postEntries = posts.map((post: any) => ({
         url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: new Date(post.date),
+        lastModified: new Date(post.date || post.updatedAt || new Date()),
         changeFrequency: 'monthly' as const,
         priority: 0.7,
     }))

@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
         date: 'October 22, 2023',
         author: 'ToolScan Team',
         keywords: ['AI in construction', 'machine learning', 'tool recognition', 'computer vision', 'workshop technology'],
-        relatedPostIds: ['1', '5'],
+        relatedPostIds: ['1'],
         content: `
       <p>We are living in an era where artificial intelligence (AI) is transforming every industry, and the world of manual labor and craftsmanship is no exception. Tool identification, once a skill honed over years of experience, is now accessible to anyone with a smartphone. Here's how AI is changing the game.</p>
 
@@ -176,44 +176,6 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Conclusion</h2>
       <p>Taking 10 minutes to clean and oil your tools after a project will save you hours of frustration later. Treat your tools with respect, and they will take care of you for a lifetime.</p>
-    `
-    },
-    {
-        id: '5',
-        slug: 'digital-vs-analog-workshop',
-        title: 'Digital vs. Analog: The Future of the Workshop',
-        excerpt: 'As digital fabrication tools like 3D printers and CNCs become common, is there still a place for the hand plane and chisel? We analyze the hybrid workshop.',
-        date: 'November 20, 2023',
-        author: 'ToolScan Team',
-        keywords: ['digital fabrication', 'hybrid woodworking', 'CNC vs hand tools', 'future of making', '3D printing'],
-        relatedPostIds: ['2', '3'],
-        content: `
-      <p>Walk into a modern professional workshop, and you might see a strange juxtaposition: a 100-year-old workbench sitting next to a high-tech CNC router. This is the rise of the "Hybrid Workshop," where digital precision meets analog soul. But are robots taking over, or is there still a need for traditional hand skills?</p>
-
-      <h2>The Rise of Digital Fabrication</h2>
-      <p>Tools like 3D printers, laser cutters, and CNC (Computer Numerical Control) machines have democratized manufacturing. They allow makers to:</p>
-      <ul>
-        <li><strong>Repeatability:</strong> Cut the exact same shape 100 times with zero deviation.</li>
-        <li><strong>Complexity:</strong> Create geometries that would be impossible or incredibly time-consuming to carve by hand.</li>
-        <li><strong>Rapid Prototyping:</strong> Go from a CAD drawing to a physical object in hours.</li>
-      </ul>
-
-      <h2>The Enduring Value of Analog</h2>
-      <p>Despite these advances, hand tools aren't going anywhere. Why?</p>
-      <ul>
-        <li><strong>Finesse:</strong> A CNC can cut a joint, but fitting it perfectly often requires a few passes with a sharp chisel.</li>
-        <li><strong>Speed for Simple Tasks:</strong> It's faster to cut a board with a chop saw than to program a CNC to do it.</li>
-        <li><strong>The "Touch":</strong> Wood is a natural material with grain and movement. A human hand can feel these nuances; a machine just powers through them, sometimes causing tear-out.</li>
-      </ul>
-
-      <h2>The Hybrid Approach</h2>
-      <p>The most successful makers today embrace both. They might use a CNC to flatten a massive slab of walnut (saving hours of back-breaking planing) but then hand-cut the dovetails for the drawers to show off their skill. They might 3D print a custom jig to help them use a router more safely.</p>
-
-      <h2>Apps as the Bridge</h2>
-      <p>Digital tools aren't just hardware; they are software too. Apps like <strong>ToolScan</strong> bridge the gap by bringing digital information to analog tools. You scan a vintage plane, learn how to tune it up via a digital guide, and then use it to smooth a board cut by a laser. It's a symbiotic relationship.</p>
-
-      <h2>Conclusion</h2>
-      <p>The future isn't Digital OR Analog; it's Digital AND Analog. The workshop of the future uses the best tool for the job, whether that tool has a microchip or a wooden handle.</p>
     `
     }
 ];
