@@ -9,8 +9,8 @@ export default function Home() {
       <section className="section" style={{ paddingTop: '140px', paddingBottom: '140px', textAlign: 'center', overflow: 'hidden' }}>
         <div className="container">
           <h1 className="animate-fade-in-up hero-title">
-            Identify Tools Instantly <br />
-            <span style={{ color: '#666' }}>with AI Precision</span>
+            AI Tool Identifier <br />
+            <span style={{ color: '#666' }}>Identify Any Hand Tool by Photo Instantly</span>
           </h1>
           <p className="animate-fade-in-up delay-100 hero-subtitle">
             Discover, recognize, and learn about hand tools instantly. Your personal workshop assistant in your pocket.

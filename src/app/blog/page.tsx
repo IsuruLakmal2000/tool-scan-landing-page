@@ -1,5 +1,20 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
+
+export const metadata: Metadata = {
+    title: "ToolScan Blog",
+    description: "Insights, guides, and news about tool identification and maintenance.",
+    alternates: {
+        canonical: "/blog",
+    },
+    openGraph: {
+        title: "ToolScan Blog",
+        description: "Insights, guides, and news about tool identification and maintenance.",
+        url: "https://www.toolidentification.app/blog",
+        type: "website",
+    },
+};
 
 export const dynamic = 'force-dynamic'; // Prevent static caching to ensure new posts appear
 

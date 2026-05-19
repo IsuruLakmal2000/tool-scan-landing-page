@@ -14,8 +14,8 @@ export default function Footer() {
                     <div>
                         <h4 style={{ fontSize: '14px', fontWeight: '600', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Product</h4>
                         <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                            <li><Link href="#" style={{ color: '#666', fontSize: '15px' }}>Features</Link></li>
-                            <li><Link href="#" style={{ color: '#666', fontSize: '15px' }}>Download</Link></li>
+                            <li><Link href="/#features" style={{ color: '#666', fontSize: '15px' }}>Features</Link></li>
+                            <li><Link href="/#download" style={{ color: '#666', fontSize: '15px' }}>Download</Link></li>
                             <li><Link href="/blog" style={{ color: '#666', fontSize: '15px' }}>Blog</Link></li>
                         </ul>
                     </div>

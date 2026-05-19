@@ -8,14 +8,14 @@ export const metadata: Metadata = {
     template: '%s | ToolScan',
     default: 'ToolScan - Smart AI Tool Finder',
   },
-  description: "Discover, recognize, and learn about hand tools instantly with AI.",
+  description: "Identify hand tools instantly with ToolScan's AI camera, then get names, uses, safety tips, and learning guides for DIYers, students, and pros.",
   metadataBase: new URL('https://www.toolidentification.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'ToolScan - Smart AI Tool Finder',
-    description: 'Discover, recognize, and learn about hand tools instantly with AI.',
+    description: "Identify hand tools instantly with ToolScan's AI camera, then get names, uses, safety tips, and learning guides for DIYers, students, and pros.",
     url: 'https://www.toolidentification.app',
     siteName: 'ToolScan',
     locale: 'en_US',

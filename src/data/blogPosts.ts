@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
         title: 'The Ultimate Guide to Identifying Antique Hand Tools',
         excerpt: 'Discover the secrets to recognizing valuable vintage tools, understanding their history, and determining their worth in today\'s market.',
         date: 'October 15, 2023',
-        author: 'ToolScan Team',
+        author: 'Isuru',
         keywords: ['antique tools', 'vintage hand tools', 'tool identification', 'collectible tools', 'woodworking history'],
         relatedPostIds: ['2', '4'],
         content: `
@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
         title: 'How AI is Revolutionizing Tool Identification',
         excerpt: 'Explore how artificial intelligence and machine learning are making it easier than ever to recognize tools, access manuals, and improve workplace safety.',
         date: 'October 22, 2023',
-        author: 'ToolScan Team',
+        author: 'Isuru',
         keywords: ['AI in construction', 'machine learning', 'tool recognition', 'computer vision', 'workshop technology'],
         relatedPostIds: ['1'],
         content: `
@@ -93,7 +93,7 @@ export const blogPosts: BlogPost[] = [
         title: '10 Essential Tools Every Homeowner Should Own',
         excerpt: 'Building your first toolbox? Here is the definitive list of the top 10 tools you need to handle basic home repairs and DIY projects.',
         date: 'November 05, 2023',
-        author: 'ToolScan Team',
+        author: 'Isuru',
         keywords: ['homeowner tools', 'DIY starter kit', 'essential hand tools', 'toolbox basics', 'home repair'],
         relatedPostIds: ['4', '1'],
         content: `
@@ -139,7 +139,7 @@ export const blogPosts: BlogPost[] = [
         title: 'Tool Maintenance 101: Keep Your Gear in Top Shape',
         excerpt: 'Learn how to clean, sharpen, and store your tools to ensure they last a lifetime. Proper maintenance saves money and prevents accidents.',
         date: 'November 12, 2023',
-        author: 'ToolScan Team',
+        author: 'Isuru',
         keywords: ['tool maintenance', 'rust removal', 'sharpening tools', 'tool storage', 'workshop safety'],
         relatedPostIds: ['3', '1'],
         content: `

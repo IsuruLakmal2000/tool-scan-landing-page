@@ -4,6 +4,19 @@ import StoreButton from "@/components/StoreButton";
 import { getBlogPostBySlug, getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
+const AUTHOR_PROFILE = {
+    name: 'Isuru',
+    profilePath: '/authors/isuru',
+    profileUrl: 'https://www.toolidentification.app/authors/isuru',
+    websiteUrl: 'https://i5uru.me/',
+    xUrl: 'https://x.com/I5uru1',
+};
+
+const normalizeAuthorName = (author?: string) => {
+    if (!author) return AUTHOR_PROFILE.name;
+    return author.trim().toLowerCase() === 'toolscan team' ? AUTHOR_PROFILE.name : author;
+};
+
 interface PageProps {
     params: Promise<{ slug: string }>;
 }
@@ -13,10 +26,14 @@ export async function generateMetadata({ params }: PageProps) {
     const post = await getBlogPostBySlug(slug);
     if (!post) return { title: 'Post Not Found' };
 
+    const authorName = normalizeAuthorName(post.author);
+    const isProfileAuthor = authorName === AUTHOR_PROFILE.name;
+    const authorProfileUrl = isProfileAuthor ? AUTHOR_PROFILE.profileUrl : undefined;
+
     return {
         title: post.title,
         description: post.excerpt,
-        keywords: post.keywords,
+        authors: authorProfileUrl ? [{ name: authorName, url: authorProfileUrl }] : [{ name: authorName }],
         alternates: {
             canonical: `/blog/${slug}`,
         },
@@ -25,7 +42,7 @@ export async function generateMetadata({ params }: PageProps) {
             description: post.excerpt,
             type: 'article',
             publishedTime: new Date(post.date).toISOString(),
-            authors: [post.author],
+            ...(authorProfileUrl ? { authors: [authorProfileUrl] } : {}),
         },
     };
 }
@@ -37,6 +54,11 @@ export default async function BlogPost({ params }: PageProps) {
     if (!post) {
         notFound();
     }
+
+    const authorName = normalizeAuthorName(post.author);
+    const isProfileAuthor = authorName === AUTHOR_PROFILE.name;
+    const authorProfilePath = isProfileAuthor ? AUTHOR_PROFILE.profilePath : undefined;
+    const authorProfileUrl = isProfileAuthor ? AUTHOR_PROFILE.profileUrl : undefined;
 
     // Fetch all posts to find related ones. 
     // Ideally usage a backend filter if relation is stored in Strapi, but manual filtering 
@@ -51,9 +73,14 @@ export default async function BlogPost({ params }: PageProps) {
         headline: post.title,
         description: post.excerpt,
         datePublished: new Date(post.date).toISOString(),
-        author: {
+        author: isProfileAuthor ? {
             '@type': 'Person',
-            name: post.author,
+            name: authorName,
+            url: authorProfileUrl,
+            sameAs: [AUTHOR_PROFILE.websiteUrl, AUTHOR_PROFILE.xUrl],
+        } : {
+            '@type': 'Person',
+            name: authorName,
         },
         url: `https://www.toolidentification.app/blog/${slug}`,
     };
@@ -73,10 +100,18 @@ export default async function BlogPost({ params }: PageProps) {
                     {post.title}
                 </h1>
 
-                <div style={{ display: 'flex', gap: '16px', color: '#666', fontSize: '14px', marginBottom: '40px', borderBottom: '1px solid #eee', paddingBottom: '40px' }}>
+                <div style={{ display: 'flex', gap: '16px', color: '#666', fontSize: '14px', marginBottom: '40px', borderBottom: '1px solid #eee', paddingBottom: '40px', flexWrap: 'wrap' }}>
                     <span>{post.date}</span>
                     <span>•</span>
-                    <span>{post.author}</span>
+                    <span>
+                        {authorProfilePath ? (
+                            <Link href={authorProfilePath} style={{ color: '#666', textDecoration: 'none' }}>
+                                {authorName}
+                            </Link>
+                        ) : (
+                            authorName
+                        )}
+                    </span>
                 </div>
 
 
@@ -88,6 +123,20 @@ export default async function BlogPost({ params }: PageProps) {
                 >
                     <BlocksRenderer content={post.content} />
                 </div>
+
+                {isProfileAuthor && (
+                    <div style={{ marginTop: '50px', padding: '24px', borderRadius: '14px', border: '1px solid #eee', backgroundColor: '#fafafa' }}>
+                        <div style={{ fontSize: '16px', fontWeight: '700', marginBottom: '8px' }}>About the author</div>
+                        <p style={{ color: '#555', fontSize: '15px', lineHeight: '1.7', marginBottom: '16px' }}>
+                            Isuru writes practical guides on tool identification, safe usage, and maintenance, with a focus on AI-assisted learning.
+                        </p>
+                        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                            <Link href={AUTHOR_PROFILE.profilePath} style={{ color: '#111', fontWeight: '600', textDecoration: 'none' }}>View profile</Link>
+                            <a href={AUTHOR_PROFILE.websiteUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#111', fontWeight: '600', textDecoration: 'none' }}>Website</a>
+                            <a href={AUTHOR_PROFILE.xUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#111', fontWeight: '600', textDecoration: 'none' }}>X (Twitter)</a>
+                        </div>
+                    </div>
+                )}
 
                 <div style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid #eee' }}>
                     <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px' }}>Ready to identify your tools?</h3>
