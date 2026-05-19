@@ -67,12 +67,18 @@ export default async function BlogPost({ params }: PageProps) {
     const allPosts = await getBlogPosts();
     const relatedPosts = allPosts.filter((p: StrapiBlogPost) => post.relatedPostIds?.includes(p.id));
 
+    const postUrl = `https://www.toolidentification.app/blog/${slug}`;
+
     const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         headline: post.title,
         description: post.excerpt,
         datePublished: new Date(post.date).toISOString(),
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': postUrl,
+        },
         author: isProfileAuthor ? {
             '@type': 'Person',
             name: authorName,
@@ -82,7 +88,32 @@ export default async function BlogPost({ params }: PageProps) {
             '@type': 'Person',
             name: authorName,
         },
-        url: `https://www.toolidentification.app/blog/${slug}`,
+        url: postUrl,
+    };
+
+    const breadcrumbJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://www.toolidentification.app/',
+            },
+            {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Blog',
+                item: 'https://www.toolidentification.app/blog',
+            },
+            {
+                '@type': 'ListItem',
+                position: 3,
+                name: post.title,
+                item: postUrl,
+            },
+        ],
     };
 
     return (
@@ -90,6 +121,10 @@ export default async function BlogPost({ params }: PageProps) {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
             <article className="container" style={{ padding: '120px 20px 60px', maxWidth: '800px' }}>
                 <Link href="/blog" style={{ textDecoration: 'none', color: '#666', fontSize: '14px', marginBottom: '24px', display: 'inline-block' }}>

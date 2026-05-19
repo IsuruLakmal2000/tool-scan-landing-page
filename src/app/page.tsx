@@ -3,8 +3,32 @@ import Image from "next/image";
 import StoreButton from "@/components/StoreButton";
 
 export default function Home() {
+  const appJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    name: "ToolScan",
+    description: "Identify any hand tool by photo instantly with AI.",
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "iOS, Android",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      ratingCount: "100",
+    },
+    url: "https://www.toolidentification.app",
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
+      />
       {/* Hero Section */}
       <section className="section" style={{ paddingTop: '140px', paddingBottom: '140px', textAlign: 'center', overflow: 'hidden' }}>
         <div className="container">
