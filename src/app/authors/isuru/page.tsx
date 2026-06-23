@@ -27,7 +27,7 @@ export default function AuthorProfilePage() {
     return (
         <div className="container" style={{ padding: "120px 20px 80px", maxWidth: "820px" }}>
             <Link href="/blog" style={{ textDecoration: "none", color: "#666", fontSize: "14px", marginBottom: "24px", display: "inline-block" }}>
-                <- Back to Blog
+                ← Back to Blog
             </Link>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
