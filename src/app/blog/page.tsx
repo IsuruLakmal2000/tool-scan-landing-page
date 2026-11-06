@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
+import { getBlogPosts, BlogPost } from "@/data/blogPosts";
 
 export const metadata: Metadata = {
     title: "ToolScan Blog",
@@ -16,9 +16,7 @@ export const metadata: Metadata = {
     },
 };
 
-export const dynamic = 'force-dynamic'; // Prevent static caching to ensure new posts appear
-
-export default async function BlogListing() {
+export default function BlogListing() {
     const breadcrumbJsonLd = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -38,12 +36,7 @@ export default async function BlogListing() {
         ],
     };
 
-    let posts: StrapiBlogPost[] = [];
-    try {
-        posts = await getBlogPosts();
-    } catch (error) {
-        console.error("Failed to fetch posts:", error);
-    }
+    const posts: BlogPost[] = getBlogPosts();
 
     return (
         <div>

@@ -16,10 +16,10 @@ export const blogPosts: BlogPost[] = [
         slug: 'identifying-antique-hand-tools',
         title: 'The Ultimate Guide to Identifying Antique Hand Tools',
         excerpt: 'Discover the secrets to recognizing valuable vintage tools, understanding their history, and determining their worth in today\'s market.',
-        date: 'October 15, 2023',
+        date: 'October 15, 2026',
         author: 'Isuru',
         keywords: ['antique tools', 'vintage hand tools', 'tool identification', 'collectible tools', 'woodworking history'],
-        relatedPostIds: ['2', '4'],
+        relatedPostIds: ['2', '4', '6'],
         content: `
       <p>For collectors, woodworkers, and history enthusiasts, stumbling upon an old, rusty tool at a flea market or estate sale is like finding buried treasure. But how do you know if that dusty plane or worn chisel is a valuable antique or just a piece of scrap metal? In this guide, we'll walk you through the essential steps of identifying antique hand tools.</p>
 
@@ -58,10 +58,10 @@ export const blogPosts: BlogPost[] = [
         slug: 'ai-revolutionizing-tool-identification',
         title: 'How AI is Revolutionizing Tool Identification',
         excerpt: 'Explore how artificial intelligence and machine learning are making it easier than ever to recognize tools, access manuals, and improve workplace safety.',
-        date: 'October 22, 2023',
+        date: 'October 22, 2026',
         author: 'Isuru',
         keywords: ['AI in construction', 'machine learning', 'tool recognition', 'computer vision', 'workshop technology'],
-        relatedPostIds: ['1'],
+        relatedPostIds: ['1', '5', '6'],
         content: `
       <p>We are living in an era where artificial intelligence (AI) is transforming every industry, and the world of manual labor and craftsmanship is no exception. Tool identification, once a skill honed over years of experience, is now accessible to anyone with a smartphone. Here's how AI is changing the game.</p>
 
@@ -92,10 +92,10 @@ export const blogPosts: BlogPost[] = [
         slug: '10-essential-tools-homeowner',
         title: '10 Essential Tools Every Homeowner Should Own',
         excerpt: 'Building your first toolbox? Here is the definitive list of the top 10 tools you need to handle basic home repairs and DIY projects.',
-        date: 'November 05, 2023',
+        date: 'November 05, 2026',
         author: 'Isuru',
         keywords: ['homeowner tools', 'DIY starter kit', 'essential hand tools', 'toolbox basics', 'home repair'],
-        relatedPostIds: ['4', '1'],
+        relatedPostIds: ['4', '1', '7'],
         content: `
       <p>Moving into a new home is exciting, but sooner or later, something will break, squeak, or need hanging. You don't need a contractor's van full of gear, but a well-stocked basic toolbox is non-negotiable. Here are the 10 essential tools every homeowner should own.</p>
 
@@ -138,7 +138,7 @@ export const blogPosts: BlogPost[] = [
         slug: 'tool-maintenance-101',
         title: 'Tool Maintenance 101: Keep Your Gear in Top Shape',
         excerpt: 'Learn how to clean, sharpen, and store your tools to ensure they last a lifetime. Proper maintenance saves money and prevents accidents.',
-        date: 'November 12, 2023',
+        date: 'November 12, 2026',
         author: 'Isuru',
         keywords: ['tool maintenance', 'rust removal', 'sharpening tools', 'tool storage', 'workshop safety'],
         relatedPostIds: ['3', '1'],
@@ -180,13 +180,51 @@ export const blogPosts: BlogPost[] = [
     },
     {
         id: '5',
+        slug: 'digital-vs-analog-workshop',
+        title: 'Digital vs. Analog: The Future of the Workshop',
+        excerpt: 'As digital fabrication tools like 3D printers and CNCs become common, is there still a place for the hand plane and chisel? We analyze the hybrid workshop.',
+        date: 'November 20, 2026',
+        author: 'ToolScan Team',
+        keywords: ['digital fabrication', 'hybrid woodworking', 'CNC vs hand tools', 'future of making', '3D printing'],
+        relatedPostIds: ['2', '3'],
+        content: `
+      <p>Walk into a modern professional workshop, and you might see a strange juxtaposition: a 100-year-old workbench sitting next to a high-tech CNC router. This is the rise of the "Hybrid Workshop," where digital precision meets analog soul. But are robots taking over, or is there still a need for traditional hand skills?</p>
+
+      <h2>The Rise of Digital Fabrication</h2>
+      <p>Tools like 3D printers, laser cutters, and CNC (Computer Numerical Control) machines have democratized manufacturing. They allow makers to:</p>
+      <ul>
+        <li><strong>Repeatability:</strong> Cut the exact same shape 100 times with zero deviation.</li>
+        <li><strong>Complexity:</strong> Create geometries that would be impossible or incredibly time-consuming to carve by hand.</li>
+        <li><strong>Rapid Prototyping:</strong> Go from a CAD drawing to a physical object in hours.</li>
+      </ul>
+
+      <h2>The Enduring Value of Analog</h2>
+      <p>Despite these advances, hand tools aren't going anywhere. Why?</p>
+      <ul>
+        <li><strong>Finesse:</strong> A CNC can cut a joint, but fitting it perfectly often requires a few passes with a sharp chisel.</li>
+        <li><strong>Speed for Simple Tasks:</strong> It's faster to cut a board with a chop saw than to program a CNC to do it.</li>
+        <li><strong>The "Touch":</strong> Wood is a natural material with grain and movement. A human hand can feel these nuances; a machine just powers through them, sometimes causing tear-out.</li>
+      </ul>
+
+      <h2>The Hybrid Approach</h2>
+      <p>The most successful makers today embrace both. They might use a CNC to flatten a massive slab of walnut (saving hours of back-breaking planing) but then hand-cut the dovetails for the drawers to show off their skill. They might 3D print a custom jig to help them use a router more safely.</p>
+
+      <h2>Apps as the Bridge</h2>
+      <p>Digital tools aren't just hardware; they are software too. Apps like <strong>ToolScan</strong> bridge the gap by bringing digital information to analog tools. You scan a vintage plane, learn how to tune it up via a digital guide, and then use it to smooth a board cut by a laser. It's a symbiotic relationship.</p>
+
+      <h2>Conclusion</h2>
+      <p>The future isn't Digital OR Analog; it's Digital AND Analog. The workshop of the future uses the best tool for the job, whether that tool has a microchip or a wooden handle.</p>
+    `
+    },
+    {
+        id: '6',
         slug: 'what-tool-is-this-identification-guide',
         title: 'What Tool Is This? The Complete Guide to Identifying Any Tool Instantly',
         excerpt: 'Struggling to identify an unknown or mystery tool? Learn the 5 most reliable ways to identify any tool instantly, from maker\'s marks to AI-powered computer vision.',
         date: 'June 12, 2026',
         author: 'ToolScan Team',
         keywords: ['tool identification', 'identify tools', 'mystery tools', 'ToolScan app', 'workshop safety'],
-        relatedPostIds: ['1', '2', '3'],
+        relatedPostIds: ['1', '2', '7'],
         content: `
       <p>You've been there before. You're cleaning out a garage, digging through a box at an estate sale, or rummaging through your grandfather's old workshop — and you pull out a metal object that stops you in your tracks. It's clearly a tool, but what tool is this exactly? What does it do? Is it even safe to use?</p>
 
@@ -319,7 +357,86 @@ export const blogPosts: BlogPost[] = [
 
       <p><strong><a href="https://apps.apple.com/lk/app/toolscan-tool-identifier/id6751974282" target="_blank" rel="noopener noreferrer">Download ToolScan on the App Store</a></strong> | <strong><a href="https://play.google.com/store/apps/details?id=com.circular.tool_identifier_app&amp;hl=en" target="_blank" rel="noopener noreferrer">Get it on Google Play</a></strong></p>
 
-      <p><em>Looking for more? Check out our guides on <a href="https://www.toolidentification.app/blog/how-to-identify-unknown-tools-guide">How to Identify Unknown Vintage Tools</a>, <a href="https://www.toolidentification.app/blog/identifying-antique-hand-tools">The Ultimate Guide to Identifying Antique Hand Tools</a>, and <a href="https://www.toolidentification.app/blog/10-essential-tools-homeowner">10 Essential Tools Every Homeowner Should Own</a>.</em></p>
+      <p><em>Looking for more? Check out our guides on <a href="/blog/identifying-antique-hand-tools">The Ultimate Guide to Identifying Antique Hand Tools</a> and <a href="/blog/10-essential-tools-homeowner">10 Essential Tools Every Homeowner Should Own</a>.</em></p>
+    `
+    },
+    {
+        id: '7',
+        slug: 'essential-car-toolkit',
+        title: 'The Essential Car Toolkit: Tools Every Glovebox and Trunk Should Have',
+        excerpt: 'From flat tires to dead batteries, here are the 10 essential tools every car should carry. Build a glovebox and trunk kit that handles real roadside emergencies.',
+        date: 'June 23, 2026',
+        author: 'ToolScan Team',
+        keywords: ['car toolkit', 'emergency car kit', 'roadside tools', 'trunk essentials', 'car emergency kit', 'jumper cables', 'tire repair kit'],
+        relatedPostIds: ['3', '4', '6'],
+        content: `
+      <p>Most of us treat our cars like appliances. We turn the key, it works, and we don't think about it again until something goes wrong. The problem is that "something goes wrong" rarely happens in your driveway. It happens on a dark highway shoulder, in a parking lot 20 minutes from home, or on a road trip three states away from your usual mechanic.</p>
+
+      <p>A well-stocked car toolkit is not about turning your trunk into a mobile garage. It's about having the handful of tools that solve 90% of roadside problems: a dead battery, a flat tire, a loose connection, or a part that just needs tightening to get you home safely. Roadside assistance memberships and insurance apps help, but they all share the same weak point: someone else has to reach you first. A response time of 45 minutes feels very different when you're stuck on a quiet shoulder than it does in the brochure, and in poor cell coverage areas, that call might not even go through. A few pounds of tools in your trunk closes that gap.</p>
+
+      <p>Below is a breakdown of the 10 tools every vehicle should carry, organized by what they actually do for you: the tools that fix the problem, and the tools that keep you safe while you deal with it.</p>
+
+      <p>And if you ever pop the trunk of a used car and find a mystery tool rattling around that nobody can identify, that's exactly the kind of thing you can snap a photo of and run through ToolScan to figure out what you're looking at and how to use it.</p>
+
+      <h2>Repair Tools</h2>
+      <p>These are the tools that let you actually fix something, rather than just wait for help.</p>
+
+      <h3>1. Tire Pressure Gauge</h3>
+      <p>Tire problems rarely happen all at once. They build slowly as a tire loses a few PSI a week until one day it's dangerously low or blows out entirely. A simple digital or dial tire pressure gauge costs less than a tank of gas and lets you catch slow leaks before they become flats. Check your tires monthly and before any long drive.</p>
+
+      <h3>2. Lug Wrench and Jack</h3>
+      <p>If your car came with a spare tire, it almost certainly came with these too, tucked under the trunk floor or cargo area. The problem is that most drivers have never actually taken them out and used them. Before you need it in the rain at night, spend ten minutes in your driveway practicing how to position the jack and break the lug nuts loose. Many lug nuts are torqued on by machine at the factory, tighter than most people can manage by hand on the first try.</p>
+      <p>A few practical notes worth knowing ahead of time: always loosen lug nuts slightly before you jack the car up, since the wheel needs to stay on the ground to give you leverage. Check your owner's manual for the correct jacking points on your specific car, since jacking up on the wrong spot can dent the frame or cause the car to slip. And if you're consistently struggling to break nuts loose by hand, a cross-pattern lug wrench or a short length of pipe slipped over the handle for extra leverage (sometimes called a "cheater bar") can make a real difference.</p>
+
+      <h3>3. Tire Repair Kit (Plug Kit and Inflator)</h3>
+      <p>A lug wrench and jack handle a flat by swapping to a spare, but plenty of modern cars don't come with a full-size spare at all — just a thin "donut" tire or nothing. A tire plug kit paired with a portable 12V air compressor or CO2 inflator can patch a small puncture and get you back to driving speed without ever removing the wheel. It's often faster than changing a tire and doesn't leave you driving on a space-saver spare for the next 50 miles.</p>
+
+      <h3>4. Multi-Tool or Compact Tool Kit</h3>
+      <p>A multi-tool that combines pliers, a knife, and a few screwdriver bits covers an enormous range of small jobs: tightening a loose hose clamp, cutting a stray zip tie, prying off a stuck panel clip, or removing a splinter. If you'd rather have dedicated tools, a small kit with a couple of screwdrivers (flathead and Phillips), needle-nose pliers, and an adjustable wrench takes up the same glovebox space and covers similar ground.</p>
+
+      <h3>5. Duct Tape and Zip Ties</h3>
+      <p>Not glamorous, but genuinely essential. A cracked hose, a dragging splash guard, a side mirror that's come loose, or a bumper clip that's popped out can often be temporarily secured with tape or a zip tie — enough to drive safely to a shop instead of pulling over and calling a tow truck. Keep a small roll of tape and a handful of zip ties in various sizes in your kit.</p>
+
+      <h2>Safety and Emergency Tools</h2>
+      <p>These tools aren't for fixing the car. They're for keeping you safe and visible while you wait for help, or getting your car running again when the battery dies.</p>
+
+      <h3>6. Jumper Cables or a Portable Jump Starter</h3>
+      <p>A dead battery is one of the most common roadside problems, and it's also one of the easiest to solve if you're prepared. Traditional jumper cables work, but they require a second car and a willing stranger willing to position their vehicle close enough to yours. A portable lithium jump starter — about the size of a paperback book — lets you jump your own battery without anyone else's help, and most double as a phone charger and flashlight.</p>
+      <p>If you go with a jump starter, check its charge every few months. Lithium jump starters lose charge slowly even sitting unused, and the worst time to discover yours is dead is when your car battery already is. If you stick with traditional cables, make sure they're long enough (12 feet or more) to comfortably reach between two vehicles parked nose to nose or side by side, since cheap short cables can leave you stretching to make a connection safely.</p>
+
+      <h3>7. LED Flashlight or Headlamp</h3>
+      <p>Your phone's flashlight is fine for finding your keys on the floor of the car. It's not built for changing a tire on the shoulder of a highway at 9 PM. A dedicated LED flashlight is brighter, doesn't drain the phone you need for calling roadside assistance, and a headlamp frees up both hands for the actual repair.</p>
+
+      <h3>8. Reflective Triangles or Flares</h3>
+      <p>If you break down on a road with any real traffic, visibility is what keeps you safe. Reflective warning triangles placed behind your vehicle warn other drivers well before they reach you, which matters most at night, in fog, or just after a curve where you're not visible until the last second. They pack flat and take up almost no trunk space.</p>
+
+      <h3>9. First Aid Kit</h3>
+      <p>Most trips in a first aid kit are minor: a cut from broken glass, a headache, a scraped knuckle while changing a tire. A compact kit with bandages, antiseptic wipes, gauze, and basic pain relief covers the vast majority of what you'll ever need on the road, without requiring a full medical bag.</p>
+
+      <h3>10. Work Gloves</h3>
+      <p>Brake dust, hot engine parts, sharp metal edges, and roadside gravel are all reasons to keep a sturdy pair of work gloves in your kit. They protect your hands during repairs and make the whole job more comfortable, especially in cold weather when bare hands go numb fast.</p>
+
+      <h2>Building Your Kit Without Overdoing It</h2>
+      <p>You don't need every tool on this list to start. If you're building a kit from scratch, prioritize in this order: tire pressure gauge, jumper cables or a jump starter, a flashlight, and a first aid kit. Those four alone cover the most common roadside scenarios — low tires, dead batteries, poor visibility, and minor injuries.</p>
+      <p>From there, add the repair-focused tools as your budget allows. A simple plastic toolbox, a zippered canvas bag, or even a sturdy shoebox works fine for keeping everything together in the trunk. The goal isn't a fully equipped shop — it's avoiding the moment where you're stranded and realize you have nothing useful within reach.</p>
+      <p>It's also worth doing a seasonal check. Heat can warp plastic tools and dry out rubber hoses in your kit, while cold weather is when batteries are most likely to die and when you'll be most grateful for that flashlight and first aid kit. A five-minute check twice a year — when you swap your clocks for daylight saving time is an easy reminder — keeps everything in working order.</p>
+
+      <h2>What About Tools You Don't Recognize?</h2>
+      <p>If you've inherited a car, bought one used, or just found something unfamiliar wedged into the trunk lining, you're not alone. Glove compartments and spare tire wells are notorious for collecting random tools left behind by previous owners or mechanics. Rather than guessing, snap a photo and let ToolScan identify it for you, along with a quick explanation of what it's used for and how to use it safely. It's a fast way to find out whether that mystery tool is something worth keeping in your kit or something you can toss.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>Cars break down. Tires go flat. Batteries die at the worst possible moments. None of that is avoidable, but being stuck without the right tools is. A car toolkit doesn't need to be expensive or complicated. It needs to cover the basics: fix a flat, jump a battery, stay visible, stay safe, and handle the small stuff before it becomes a big problem.</p>
+      <p>Start with the essentials, build up from there, and check your kit twice a year. The next time something goes wrong on the road, you'll be glad it's already in the trunk.</p>
+
+      <p><strong><a href="https://apps.apple.com/lk/app/toolscan-tool-identifier/id6751974282" target="_blank" rel="noopener noreferrer">Download ToolScan on the App Store</a></strong> | <strong><a href="https://play.google.com/store/apps/details?id=com.circular.tool_identifier_app&amp;hl=en" target="_blank" rel="noopener noreferrer">Get it on Google Play</a></strong></p>
     `
     }
 ];
+
+export function getBlogPosts(): BlogPost[] {
+    return [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+    return blogPosts.find(post => post.slug === slug);
+}

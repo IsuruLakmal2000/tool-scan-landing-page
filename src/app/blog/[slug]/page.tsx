@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import StoreButton from "@/components/StoreButton";
-import { getBlogPostBySlug, getBlogPosts, StrapiBlogPost } from "@/lib/strapi";
-import { BlocksRenderer } from '@strapi/blocks-react-renderer';
+import { getBlogPostBySlug, blogPosts, BlogPost } from "@/data/blogPosts";
 
 const AUTHOR_PROFILE = {
     name: 'Isuru',
@@ -21,9 +20,15 @@ interface PageProps {
     params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+    return blogPosts.map((post) => ({
+        slug: post.slug,
+    }));
+}
+
 export async function generateMetadata({ params }: PageProps) {
     const { slug } = await params;
-    const post = await getBlogPostBySlug(slug);
+    const post = getBlogPostBySlug(slug);
     if (!post) return { title: 'Post Not Found' };
 
     const authorName = normalizeAuthorName(post.author);
@@ -47,9 +52,9 @@ export async function generateMetadata({ params }: PageProps) {
     };
 }
 
-export default async function BlogPost({ params }: PageProps) {
+export default async function BlogPostPage({ params }: PageProps) {
     const { slug } = await params;
-    const post = await getBlogPostBySlug(slug);
+    const post = getBlogPostBySlug(slug);
 
     if (!post) {
         notFound();
@@ -60,12 +65,9 @@ export default async function BlogPost({ params }: PageProps) {
     const authorProfilePath = isProfileAuthor ? AUTHOR_PROFILE.profilePath : undefined;
     const authorProfileUrl = isProfileAuthor ? AUTHOR_PROFILE.profileUrl : undefined;
 
-    // Fetch all posts to find related ones. 
-    // Ideally usage a backend filter if relation is stored in Strapi, but manual filtering 
-    // based on the ID array approach from original code is preserved here for now if 'relatedPostIds' exists.
-    // If 'relatedPostIds' is an array of IDs from Strapi:
-    const allPosts = await getBlogPosts();
-    const relatedPosts = allPosts.filter((p: StrapiBlogPost) => post.relatedPostIds?.includes(p.id));
+    const relatedPosts = post.relatedPostIds
+        ? blogPosts.filter((p) => post.relatedPostIds.includes(p.id))
+        : [];
 
     const postUrl = `https://www.toolidentification.app/blog/${slug}`;
 
@@ -149,15 +151,11 @@ export default async function BlogPost({ params }: PageProps) {
                     </span>
                 </div>
 
-
-
-
                 <div
                     style={{ fontSize: '18px', lineHeight: '1.8', color: '#333' }}
-                    className="strapi-content"
-                >
-                    <BlocksRenderer content={post.content} />
-                </div>
+                    className="blog-content"
+                    dangerouslySetInnerHTML={{ __html: post.content }}
+                />
 
                 {isProfileAuthor && (
                     <div style={{ marginTop: '50px', padding: '24px', borderRadius: '14px', border: '1px solid #eee', backgroundColor: '#fafafa' }}>
@@ -187,7 +185,7 @@ export default async function BlogPost({ params }: PageProps) {
                     <div className="container">
                         <h3 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '40px' }}>Related Articles</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-                            {relatedPosts.map((related: StrapiBlogPost) => (
+                            {relatedPosts.map((related: BlogPost) => (
                                 <Link key={related.id} href={`/blog/${related.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                     <div style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '16px', border: '1px solid #eee', height: '100%', transition: 'transform 0.2s' }}>
                                         <h4 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '12px' }}>{related.title}</h4>
@@ -199,7 +197,6 @@ export default async function BlogPost({ params }: PageProps) {
                     </div>
                 </section>
             )}
-
         </div>
     );
 }
