@@ -293,6 +293,14 @@ async function run() {
       author: 'Isuru',
       keywords: ['cold chisel vs wood chisel', 'metal cutting chisel', 'chisel sharpening', 'workshop safety', 'ToolScan app'],
       relatedPostIds: ['4', '14', '8']
+    },
+    'machinist-precision-measuring-tools-guide': {
+      slug: 'machinist-precision-measuring-tools-guide',
+      excerpt: 'Master dimensional metrology. Compare calipers, micrometers, and dial test indicators, explore Abbe’s Principle, and learn how to measure down to 0.0001 inches accurately.',
+      date: '2026-11-15',
+      author: 'Isuru',
+      keywords: ['precision measuring tools', 'caliper vs micrometer', 'machinist tools guide', 'dial indicator', 'ToolScan app'],
+      relatedPostIds: ['5', '1', '11']
     }
   };
 

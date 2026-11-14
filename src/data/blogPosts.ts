@@ -1510,6 +1510,103 @@ export const blogPosts: BlogPost[] = [
 
       <p><strong><a href="https://apps.apple.com/lk/app/toolscan-tool-identifier/id6751974282" target="_blank" rel="noopener noreferrer">Download ToolScan on the App Store</a></strong> | <strong><a href="https://play.google.com/store/apps/details?id=com.circular.tool_identifier_app&amp;hl=en" target="_blank" rel="noopener noreferrer">Get it on Google Play</a></strong></p>
     `
+    },
+    {
+        id: '20',
+        slug: 'machinist-precision-measuring-tools-guide',
+        title: 'Machinist Precision Measuring Tools: Calipers, Micrometers, and Dial Indicators Explained',
+        excerpt: 'Master dimensional metrology. Compare calipers, micrometers, and dial test indicators, explore Abbe’s Principle, and learn how to measure down to 0.0001 inches accurately.',
+        date: 'November 15, 2026',
+        author: 'Isuru',
+        keywords: ['precision measuring tools', 'caliper vs micrometer', 'machinist tools guide', 'dial indicator', 'ToolScan app'],
+        relatedPostIds: ['5', '1', '11'],
+        content: `
+      <p>In general carpentry and home repair, a 1/16-inch (1.5mm) discrepancy can often be hidden with wood putty or a gentle tap of a mallet. But in precision machining, engine rebuilding, gunsmithing, and aerospace manufacturing, a discrepancy of 0.001 inches (one-thousandth of an inch, or 25 microns)—less than half the thickness of a human hair—is the difference between an engine running smoothly for 200,000 miles or seizing completely on the test stand.</p>
+
+      <p>When tape measures and standard steel rulers reach their physical limits, craftsmen transition into the world of <strong>precision measuring tools</strong>.</p>
+
+      <figure>
+        <img src="/assets/blog/unusual-tools-illustration.jpg" alt="Hand-drawn architectural diagram of precision machinist measuring instruments: dial calipers, micrometers, and test indicators" />
+        <figcaption>Figure 1: Precision metrology instruments—from dial calipers to outside micrometers—convert microscopic spatial gaps into readable dimensional metrics.</figcaption>
+      </figure>
+
+      <p>Whether you are an apprentice machinist, an engine builder measuring piston skirt clearances, or an antique tool collector attempting to date vintage Starrett or Brown &amp; Sharpe tools, this <strong>machinist tools guide</strong> breaks down the mechanics, accuracy thresholds, and practical applications of calipers, micrometers, and dial indicators.</p>
+
+      <h2>Direct Answer: Caliper vs. Micrometer Accuracy</h2>
+
+      <blockquote>
+        <p><strong>Quick Summary:</strong> A <strong>caliper</strong> is a versatile multi-purpose tool that measures outside diameter (OD), inside diameter (ID), depth, and step dimensions across a wide 0–6" range with a typical accuracy of <strong>±0.001 inches (0.025 mm)</strong>. A <strong>micrometer</strong> is a single-purpose high-precision instrument that measures a narrow 1-inch span (e.g., 0–1" or 1–2") with an extreme accuracy of <strong>±0.0001 inches (0.0025 mm)</strong>—ten times more precise than a caliper—by eliminating mechanical angular deflection according to Abbe's Principle.</p>
+      </blockquote>
+
+      <h2>Abbe’s Principle: Why Micrometers Beat Calipers</h2>
+
+      <p>To understand why a machinist never relies on a caliper to measure engine crankshaft journals or bearing press fits, look at <strong>Abbe's Principle of In-Line Measurement</strong> (formulated by German physicist Ernst Abbe in 1890):</p>
+
+      <ul>
+        <li><strong>The In-Line Measurement Law:</strong> Maximum measurement accuracy is achieved <em>only</em> when the measuring instrument’s reference scale is positioned directly along the exact same optical or mechanical axis as the dimension being measured.</li>
+        <li><strong>The Caliper Flaw (Off-Axis):</strong> On a dial or digital caliper, the measuring jaws stick out 1.5 inches away from the main beam scale. When you squeeze the jaws against a workpiece, that physical offset acts as a lever arm. Even microscopic play in the sliding jaw causes the jaws to splay open slightly, introducing a 0.0005" to 0.001" angular error.</li>
+        <li><strong>The Micrometer Advantage (Coaxial):</strong> On an outside micrometer, the measuring spindle, the precision ground lead screw, and the reference anvil are positioned in a single, continuous, straight line. There is zero offset lever arm, zero jaw deflection, and zero Abbe error.</li>
+      </ul>
+
+      <h2>1. Calipers: The Multi-Purpose Metrology Workhorse</h2>
+
+      <p>Calipers are the Swiss Army knife of dimensional metrology. A single 6-inch caliper performs <strong>four distinct measurements</strong>:</p>
+
+      <ol>
+        <li><strong>Outside Diameter (OD):</strong> Large flat lower jaws measure bolt diameters, bar stock thickness, and cylinder shafts.</li>
+        <li><strong>Inside Diameter (ID):</strong> Knife-edge upper jaws reach inside holes, cylinder bores, and bearing slots.</li>
+        <li><strong>Depth:</strong> A thin rectangular rod extending from the tail end of the beam measures blind hole depths.</li>
+        <li><strong>Step Measurement:</strong> The stepped front shoulder of the sliding jaw measures the height offset between two parallel surfaces.</li>
+      </ol>
+
+      <figure>
+        <img src="/assets/blog/mystery-tools-illustration.jpg" alt="Hand-drawn technical diagram of caliper jaw geometries and vernier scale alignment" />
+        <figcaption>Figure 2: The four measuring interfaces of a caliper: outside jaws, inside nibs, depth probe, and stepped shoulder.</figcaption>
+      </figure>
+
+      <h3>Caliper Types: Vernier vs. Dial vs. Digital</h3>
+
+      <ul>
+        <li><strong>Vernier Calipers:</strong> Purely mechanical dual scales. Requires no batteries and resists shop coolant, but demands sharp eyesight.</li>
+        <li><strong>Dial Calipers:</strong> Internal rack-and-pinion rotating an analog dial indicator. Highly visual and sensitive to 0.001" increments.</li>
+        <li><strong>Digital Calipers:</strong> Capacitive glass scale delivering rapid LCD readouts, instant Metric/Inch conversion, and absolute zero positioning.</li>
+      </ul>
+
+      <h2>2. Micrometers: The Ten-Thousandths Standard</h2>
+
+      <p>A micrometer uses a precision-ground 40-TPI lead screw. Because one turn advances 0.025 inches, dividing the rotating thimble into 25 divisions reads thousandths directly, with vernier sleeve markings resolving down to <strong>0.0001 inches (one ten-thousandth)</strong>.</p>
+
+      <ul>
+        <li><strong>Outside Micrometer:</strong> C-frame design with carbide anvils for precision shaft and bearing measurements.</li>
+        <li><strong>Depth Micrometer:</strong> Hardened cross-base with interchangeable calibrated rods.</li>
+        <li><strong>The Ratchet Thimble Rule:</strong> Always turn the ratchet stop until it clicks three times to apply identical, repeatable measuring pressure without warping the frame.</li>
+      </ul>
+
+      <h2>3. Dial Indicators &amp; Test Indicators: Measuring Deviation</h2>
+
+      <p>While calipers and micrometers measure absolute size, indicators measure <strong>relative variation, runout, and backlash</strong>.</p>
+
+      <ul>
+        <li><strong>Plunger Dial Indicator:</strong> Long stroke travel (0.250" to 1.000") for brake rotor runout and fixture alignment.</li>
+        <li><strong>Dial Test Indicator (DTI):</strong> Short-range swiveling jeweled stylus resolving minute deflections down to 0.00005" for 4-jaw lathe chuck centering and milling head tramming.</li>
+      </ul>
+
+      <h2>Thermal Expansion: The Secret Enemy of Accuracy</h2>
+
+      <p>Steel expands roughly 6.5 micro-inches per inch per °F. Holding a cold micrometer frame in bare warm hands can warp readings by 0.0004 inches. Always grip micrometers by their insulated plastic thermal pads and allow parts to stabilize at the standard 68°F (20°C) calibration reference temperature.</p>
+
+      <h2>Identify Precision Metrology Tools Instantly with ToolScan</h2>
+
+      <p>Staring at a vintage wooden velvet-lined box containing an unmarked vernier height gauge, a thread pitch micrometer, or a bore gauge?</p>
+
+      <blockquote>
+        <p><strong>Scan vintage micrometers, dial indicators, and calipers to verify accuracy and reading steps with ToolScan.</strong></p>
+      </blockquote>
+
+      <p>With <strong>ToolScan</strong>, simply snap a photo of any measuring instrument. ToolScan’s computer vision engine instantly recognizes the tool, classifies its graduation standard (Imperial vs. Metric, 0.001" vs. 0.0001"), explains proper zero-calibration procedures, and guides you on how to read its scales accurately.</p>
+
+      <p><strong><a href="https://apps.apple.com/lk/app/toolscan-tool-identifier/id6751974282" target="_blank" rel="noopener noreferrer">Download ToolScan on the App Store</a></strong> | <strong><a href="https://play.google.com/store/apps/details?id=com.circular.tool_identifier_app&amp;hl=en" target="_blank" rel="noopener noreferrer">Get it on Google Play</a></strong></p>
+    `
     }
 ];
 
