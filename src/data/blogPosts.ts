@@ -679,7 +679,7 @@ export const blogPosts: BlogPost[] = [
         date: 'November 06, 2026',
         author: 'Isuru',
         keywords: ['types of pliers', 'plier identification guide', 'pliers guide', 'hand tool identification', 'ToolScan app'],
-        relatedPostIds: ['3', '6', '11'],
+        relatedPostIds: ['3', '6', '11', '21'],
         content: `
       <p>Open almost any toolbox in the world, and you will find at least one pair of pliers. But take a closer look at a professional mechanic's rolling cart, an electrician's pouch, or a jeweler's bench, and you will realize that "pliers" is not just one tool—it is an entire family of specialized hand tools, each meticulously engineered to grip, cut, twist, bend, or crimp materials under precise mechanical leverage.</p>
 
@@ -799,7 +799,7 @@ export const blogPosts: BlogPost[] = [
         date: 'November 06, 2026',
         author: 'Isuru',
         keywords: ['types of wrenches guide', 'wrench sizes and types', 'socket sizes', 'Torx wrenches', 'ToolScan app'],
-        relatedPostIds: ['7', '3', '10'],
+        relatedPostIds: ['7', '3', '10', '21'],
         content: `
       <p>Few sounds in the workshop are more sickening than the dull metallic <em>snap</em> of a rounded bolt head. It usually happens when you are rushed, working in a tight spot, and using the wrong wrench—or the wrong size—on a stubborn fastener.</p>
 
@@ -1519,7 +1519,7 @@ export const blogPosts: BlogPost[] = [
         date: 'November 15, 2026',
         author: 'Isuru',
         keywords: ['precision measuring tools', 'caliper vs micrometer', 'machinist tools guide', 'dial indicator', 'ToolScan app'],
-        relatedPostIds: ['5', '1', '11'],
+        relatedPostIds: ['5', '1', '11', '21'],
         content: `
       <p>In general carpentry and home repair, a 1/16-inch (1.5mm) discrepancy can often be hidden with wood putty or a gentle tap of a mallet. But in precision machining, engine rebuilding, gunsmithing, and aerospace manufacturing, a discrepancy of 0.001 inches (one-thousandth of an inch, or 25 microns)—less than half the thickness of a human hair—is the difference between an engine running smoothly for 200,000 miles or seizing completely on the test stand.</p>
 
@@ -1606,6 +1606,170 @@ export const blogPosts: BlogPost[] = [
       <p>With <strong>ToolScan</strong>, simply snap a photo of any measuring instrument. ToolScan’s computer vision engine instantly recognizes the tool, classifies its graduation standard (Imperial vs. Metric, 0.001" vs. 0.0001"), explains proper zero-calibration procedures, and guides you on how to read its scales accurately.</p>
 
       <p><strong><a href="https://apps.apple.com/lk/app/toolscan-tool-identifier/id6751974282" target="_blank" rel="noopener noreferrer">Download ToolScan on the App Store</a></strong> | <strong><a href="https://play.google.com/store/apps/details?id=com.circular.tool_identifier_app&amp;hl=en" target="_blank" rel="noopener noreferrer">Get it on Google Play</a></strong></p>
+    `
+    },
+    {
+        id: '21',
+        slug: 'screwdriver-drive-types-torx-robertson-posidriv-guide',
+        title: "Fastener Drive Types Explained: Torx vs. Torx Plus vs. Robertson vs. Phillips vs. Pozidriv",
+        excerpt: 'Identify every common fastener drive: Phillips, Pozidriv, Robertson, Torx, Torx Plus and more. Compare standards, sizes, cam-out resistance and bit steel hardness to stop stripping screws.',
+        date: 'November 16, 2026',
+        author: 'Isuru',
+        keywords: ['fastener drive types', 'torx vs phillips', 'robertson vs phillips', 'pozidriv vs phillips', 'screw head identification', 'ToolScan app'],
+        relatedPostIds: ['11', '10', '20'],
+        content: `
+<p>A <strong>fastener drive type</strong> is the shaped recess in a screw or bolt head that lets a driver transmit torque. The main families are slotted, Phillips (cross), Pozidriv (cross with extra ribs), Robertson (square), hex (Allen), Torx (six-lobe star), and Torx Plus (five-lobe, elongated). Choosing the matching driver prevents "cam-out", the stripping that happens when a driver slips out of the recess under load. Torx and Robertson resist cam-out best. Phillips is the only common drive designed to cam out deliberately.</p>
+
+<figure>
+<img src="/assets/blog/wrench-types-illustration.jpg" alt="Hand-drawn technical illustration of drivers, hex keys and Torx bits used to turn fastener heads" />
+<figcaption>Figure 1: Drivers and bits come in matched profiles. A mismatched tip is the leading cause of stripped fastener heads.</figcaption>
+</figure>
+
+<h2>Why Drive Type Matters: Cam-Out, Torque, and Tip Fit</h2>
+
+<p>Every drive is a compromise between three things: how much torque it can carry, how well it centers the driver, and how easily it can be made on a high-speed heading machine.</p>
+
+<ul>
+<li><strong>Cam-out:</strong> The driver climbs out of the recess because the recess walls are angled. Steeper walls mean more cam-out.</li>
+<li><strong>Self-centering:</strong> Robertson's tapered square and Torx's lobes hold a screw on the bit without a magnet, so you can drive with one hand.</li>
+<li><strong>Tooling life:</strong> Drives with near-parallel walls, like Torx, spread contact stress over six lobes. Bits last several times longer than Phillips bits in production use.</li>
+</ul>
+
+<p>Phillips was patented in the 1930s for assembly lines. Its tapered cross was meant to cam out to stop over-tightening before torque-limiting drivers existed. That is a feature in a car factory in 1936 and a nuisance in a deck screw today.</p>
+
+<h2>The Main Drive Types, Identified</h2>
+
+<h3>Slotted (Flat)</h3>
+
+<p>A single straight groove. It is the oldest drive, cheap to cut, and easy to identify. It has no self-centering and drivers slip sideways easily. It survives on brass hardware, electrical outlet terminals, and antique restoration. Match the blade width to the slot length and the blade thickness to the slot width. A tip that is too narrow chews the slot walls.</p>
+
+<h3>Phillips (PH)</h3>
+
+<p>A cross with tapered, rounded walls and a pointed center. Sizes run PH000 to PH4. <strong>PH2</strong> is by far the most common, used on drywall screws, general wood screws, and most consumer electronics. A PH1 bit in a PH2 screw is the classic way to strip it.</p>
+
+<h3>Pozidriv (PZ)</h3>
+
+<p>Pozidriv looks like Phillips but adds four small tick marks between the cross arms, and the walls are nearly parallel. Those ribs let the driver sit deeper with much less cam-out. <strong>PZ2</strong> screws are standard in European cabinetry, hinges, and furniture hardware. A Phillips bit in a Pozidriv screw fits loosely and wobbles. A Pozidriv bit in a Phillips screw also wobbles.</p>
+
+<blockquote>
+<p><strong>Identification tip:</strong> Look for the small radial tick marks around the cross. No ticks means Phillips. Ticks mean Pozidriv.</p>
+</blockquote>
+
+<h3>Robertson (Square, "Scrulox")</h3>
+
+<p>A square socket with slightly tapered walls, invented by P.L. Robertson in Canada in 1908. It is color coded in Canada: <strong>#1 yellow, #2 red, #3 green</strong>. A #2 red bit fits the vast majority of construction and deck screws. A tight fit makes the screw stick to the bit.</p>
+
+<h3>Hex Socket (Allen)</h3>
+
+<p>A six-sided socket driven by an L-shaped key or hex bit. Sizes are metric (1.5 to 10 mm and larger) or imperial (1/16 to 3/8 in). Hex keys are commonly made from S2 or chrome-vanadium steel. Mixing metric and imperial keys, such as a 5 mm key in a 3/16 in socket, rounds the socket over time.</p>
+
+<h3>Torx (Hexalobular, ISO 10664)</h3>
+
+<p>A six-lobe star with rounded points. Designated <strong>T-sizes</strong> (T10, T15, T20, T25, T27, T30, T40, T45, T50). The standard is <strong>ISO 10664</strong>, which defines the hexalobular internal profile. Because torque is applied nearly perpendicular to the lobe walls, cam-out is minimal and a driver can apply far more torque than a Phillips of equal size. Torx dominates automotive trim, brake caliper bolts, bicycle disc rotors, and electronics.</p>
+
+<h3>Torx Plus (TP)</h3>
+
+<p>A development of Torx by Acument. It uses five lobes with a more squared profile for even lower cam-out and longer tool life. <strong>Do not mix</strong> standard Torx and Torx Plus. A T25 bit will insert into a 25IP Torx Plus socket, but it fits loosely and strips. Torx Plus is used in aerospace and some automotive assemblies. Its size designation uses "IP" (for example 25IP).</p>
+
+<h3>Tamper-Resistant and Specialty Drives</h3>
+
+<ul>
+<li><strong>Security Torx (Torx TR / Pin Torx):</strong> Torx with a center pin. It requires a bit with a matching hole. Common on public fixtures and appliances.</li>
+<li><strong>Triple Square (XZN):</strong> A 12-spline male-style recess found on German cars (VW, Audi, BMW) for CV joints and engine bolts.</li>
+<li><strong>Spanner and Snake-Eye:</strong> Two holes for a pronged driver. Used on public restroom fixtures.</li>
+<li><strong>Tri-Wing:</strong> Three slotted wings. Found on aircraft panels and older game consoles.</li>
+</ul>
+
+<figure>
+<img src="/assets/blog/mystery-tools-illustration.jpg" alt="Hand-drawn illustration of assorted tool tips and drive recesses for visual identification" />
+<figcaption>Figure 2: Comparing the shape of a recess against a reference chart is the fastest way to identify an unknown fastener drive.</figcaption>
+</figure>
+
+<h2>Fastener Drive Comparison Table</h2>
+
+<table>
+<thead><tr><th>Drive</th><th>Standard</th><th>Lobes / Shape</th><th>Common Sizes</th><th>Cam-Out Resistance</th><th>Typical Use</th></tr></thead>
+<tbody>
+<tr><td>Slotted</td><td>ASME B18.6.3</td><td>Single groove</td><td>By blade width</td><td>Low</td><td>Brass hardware, outlets</td></tr>
+<tr><td>Phillips</td><td>ASME B18.6.3 / ISO 4757</td><td>4-arm tapered cross</td><td>PH0, PH1, PH2, PH3</td><td>Low (by design)</td><td>Drywall, electronics</td></tr>
+<tr><td>Pozidriv</td><td>ISO 4757</td><td>Cross plus 4 ribs</td><td>PZ1, PZ2, PZ3</td><td>Moderate</td><td>European furniture, cabinets</td></tr>
+<tr><td>Robertson</td><td>ASME B18.6.3 (square)</td><td>Tapered square</td><td>#0 to #3</td><td>High</td><td>Decking, construction</td></tr>
+<tr><td>Hex (Allen)</td><td>ISO 4762 / ASME B18.3</td><td>6-sided</td><td>1.5 to 10 mm</td><td>Moderate to high</td><td>Furniture, bikes</td></tr>
+<tr><td>Torx</td><td>ISO 10664</td><td>6-lobe star</td><td>T10 to T50</td><td>High</td><td>Automotive, electronics</td></tr>
+<tr><td>Torx Plus</td><td>Proprietary (Acument)</td><td>5-lobe, squared</td><td>10IP to 55IP</td><td>Very high</td><td>Aerospace, assembly lines</td></tr>
+<tr><td>Triple Square</td><td>DIN 34803</td><td>12-spline</td><td>M5 to M12</td><td>High</td><td>German automotive</td></tr>
+</tbody>
+</table>
+
+<h2>Tool Metallurgy and Hardness</h2>
+
+<p>The best driver bit still fails if the steel is wrong. Quality bits use:</p>
+
+<ul>
+<li><strong>S2 tool steel:</strong> Shock-resistant, typically hardened to about <strong>HRC 58 to 62</strong>. It is the standard for impact-rated bits.</li>
+<li><strong>Chrome-vanadium (Cr-V):</strong> Common in hand screwdriver shafts, around <strong>HRC 52 to 58</strong>. It trades some hardness for toughness.</li>
+<li><strong>Impact-rated bits:</strong> Include a torsion zone, a narrowed section that flexes under impact to absorb spikes and prevent snapping.</li>
+</ul>
+
+<p>Standards matter too. Hand screwdrivers are covered by <strong>ANSI/ASME B107.600</strong> (US) and <strong>DIN 5262</strong> or <strong>ISO 2380</strong> for slotted tips. <strong>DIN 7437</strong> covers Pozidriv-style insert bits. A tip tolerance of a few hundredths of a millimeter is the difference between a snug fit and a stripped head.</p>
+
+<h2>Practical Rules for Never Stripping a Screw Again</h2>
+
+<ol>
+<li><strong>Match the exact size and family.</strong> PH2 into PH2, PZ2 into PZ2, T25 into T25.</li>
+<li><strong>Seat the bit fully</strong> before turning. A partly seated bit loads the tips of the recess only.</li>
+<li><strong>Apply firm axial pressure.</strong> Push into the screw while you turn. Pressure is what stops cam-out in Phillips and Pozidriv.</li>
+<li><strong>Keep the bit square</strong> to the screw axis.</li>
+<li><strong>Use a clean recess.</strong> Paint, rust, or debris keeps the bit from seating. Clear it with a pick.</li>
+<li><strong>Choose the right power.</strong> Use a drill clutch setting or a torque-limiting driver for small screws. Use impact-rated bits for impact drivers.</li>
+<li><strong>If it starts to strip,</strong> stop. Place a wide rubber band between bit and screw, use a screw extractor, or switch to a left-hand drill bit.</li>
+</ol>
+
+<h2>How to Identify an Unknown Drive in Seconds</h2>
+
+<p>Follow this flow:</p>
+
+<ul>
+<li>Straight line only? <strong>Slotted.</strong></li>
+<li>Cross? Look for ticks. Ticks mean <strong>Pozidriv</strong>, none means <strong>Phillips</strong>.</li>
+<li>Square hole? <strong>Robertson.</strong> If the walls are slightly tapered and it sits tight, it is Robertson. A true parallel square is a different industrial drive.</li>
+<li>Six-sided hole? <strong>Hex.</strong></li>
+<li>Star? Count the lobes: six rounded lobes mean <strong>Torx</strong>, five squared lobes mean <strong>Torx Plus</strong>, a pin in the center means <strong>Security Torx</strong>.</li>
+<li>Twelve points? <strong>Triple Square.</strong></li>
+</ul>
+
+<h2>Identify Any Screwdriver or Drive Bit with ToolScan</h2>
+
+<p>Found a drawer of unmarked bits, an old driver set, or a screw head you cannot name?</p>
+
+<blockquote>
+<p><strong>Scan it with ToolScan.</strong> Snap a photo of any screwdriver, bit, or fastener head and ToolScan's computer vision identifies the drive type, size, and correct matching tool in seconds.</p>
+<p><a href="https://apps.apple.com/lk/app/toolscan-tool-identifier/id6751974282" target="_blank" rel="noopener noreferrer">Download ToolScan on the App Store</a> | <a href="https://play.google.com/store/apps/details?id=com.circular.tool_identifier_app&amp;hl=en" target="_blank" rel="noopener noreferrer">Get it on Google Play</a></p>
+</blockquote>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is the difference between Phillips and Pozidriv?</h3>
+
+<p>Pozidriv has four extra radial tick marks and nearly parallel walls. It holds a driver deeper and cams out far less. The two are not interchangeable.</p>
+
+<h3>Is Torx better than Phillips?</h3>
+
+<p>For torque and tool life, yes. Torx transmits more torque with far less cam-out. Phillips remains common because of its low cost and wide availability.</p>
+
+<h3>Can I use a Torx bit in a Torx Plus screw?</h3>
+
+<p>It may fit, but loosely. Using the wrong profile can strip the recess. Use the matching IP-size Torx Plus bit.</p>
+
+<h3>What is the most common screwdriver size?</h3>
+
+<p>PH2 is the most common Phillips size. For Robertson it is #2 (red). For Torx it is T25 in general use.</p>
+
+<h3>What steel are the best bits made from?</h3>
+
+<p>S2 tool steel at about HRC 58 to 62 is the standard for quality and impact-rated bits.</p>
+
+<p>Knowing your drive types turns "which screwdriver is this?" into a ten-second check, and keeps every screw head intact.</p>
     `
     }
 ];

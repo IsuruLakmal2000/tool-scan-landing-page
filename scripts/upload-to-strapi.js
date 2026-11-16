@@ -300,7 +300,15 @@ async function run() {
       date: '2026-11-15',
       author: 'Isuru',
       keywords: ['precision measuring tools', 'caliper vs micrometer', 'machinist tools guide', 'dial indicator', 'ToolScan app'],
-      relatedPostIds: ['5', '1', '11']
+      relatedPostIds: ['5', '1', '11', '21']
+    },
+    'screwdriver-drive-types-torx-robertson-posidriv-guide': {
+      slug: 'screwdriver-drive-types-torx-robertson-posidriv-guide',
+      excerpt: 'Identify every common fastener drive: Phillips, Pozidriv, Robertson, Torx, Torx Plus and more. Compare standards, sizes, cam-out resistance and bit steel hardness to stop stripping screws.',
+      date: '2026-11-16',
+      author: 'Isuru',
+      keywords: ['fastener drive types', 'torx vs phillips', 'robertson vs phillips', 'pozidriv vs phillips', 'screw head identification', 'ToolScan app'],
+      relatedPostIds: ['11', '10', '20']
     }
   };
 
