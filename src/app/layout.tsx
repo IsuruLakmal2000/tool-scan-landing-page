@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -42,7 +43,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
+        </Script>
+        <Script id="gtm-script" src="https://www.googletagmanager.com/gtm.js?id=GTM-NPLGKQTC" strategy="afterInteractive" />
+      </head>
       <body style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPLGKQTC" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} />
+        </noscript>
         <Header />
         <main style={{ flex: 1 }}>
           {children}
