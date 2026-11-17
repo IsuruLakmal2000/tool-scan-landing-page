@@ -49,6 +49,13 @@ export default function RootLayout({
 window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
         </Script>
         <Script id="gtm-script" src="https://www.googletagmanager.com/gtm.js?id=GTM-NPLGKQTC" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-X7QYQKB94V" strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X7QYQKB94V');`}
+        </Script>
       </head>
       <body style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         <noscript>
