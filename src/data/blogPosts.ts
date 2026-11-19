@@ -799,7 +799,7 @@ export const blogPosts: BlogPost[] = [
         date: 'November 06, 2026',
         author: 'Isuru',
         keywords: ['types of wrenches guide', 'wrench sizes and types', 'socket sizes', 'Torx wrenches', 'ToolScan app'],
-        relatedPostIds: ['7', '3', '10', '21'],
+        relatedPostIds: ['7', '3', '10', '21', '22'],
         content: `
       <p>Few sounds in the workshop are more sickening than the dull metallic <em>snap</em> of a rounded bolt head. It usually happens when you are rushed, working in a tight spot, and using the wrong wrench—or the wrong size—on a stubborn fastener.</p>
 
@@ -1519,7 +1519,7 @@ export const blogPosts: BlogPost[] = [
         date: 'November 15, 2026',
         author: 'Isuru',
         keywords: ['precision measuring tools', 'caliper vs micrometer', 'machinist tools guide', 'dial indicator', 'ToolScan app'],
-        relatedPostIds: ['5', '1', '11', '21'],
+        relatedPostIds: ['5', '1', '11', '21', '22'],
         content: `
       <p>In general carpentry and home repair, a 1/16-inch (1.5mm) discrepancy can often be hidden with wood putty or a gentle tap of a mallet. But in precision machining, engine rebuilding, gunsmithing, and aerospace manufacturing, a discrepancy of 0.001 inches (one-thousandth of an inch, or 25 microns)—less than half the thickness of a human hair—is the difference between an engine running smoothly for 200,000 miles or seizing completely on the test stand.</p>
 
@@ -1616,7 +1616,7 @@ export const blogPosts: BlogPost[] = [
         date: 'November 16, 2026',
         author: 'Isuru',
         keywords: ['fastener drive types', 'torx vs phillips', 'robertson vs phillips', 'pozidriv vs phillips', 'screw head identification', 'ToolScan app'],
-        relatedPostIds: ['11', '10', '20'],
+        relatedPostIds: ['11', '10', '20', '22'],
         content: `
 <p>A <strong>fastener drive type</strong> is the shaped recess in a screw or bolt head that lets a driver transmit torque. The main families are slotted, Phillips (cross), Pozidriv (cross with extra ribs), Robertson (square), hex (Allen), Torx (six-lobe star), and Torx Plus (five-lobe, elongated). Choosing the matching driver prevents "cam-out", the stripping that happens when a driver slips out of the recess under load. Torx and Robertson resist cam-out best. Phillips is the only common drive designed to cam out deliberately.</p>
 
@@ -1770,6 +1770,169 @@ export const blogPosts: BlogPost[] = [
 <p>S2 tool steel at about HRC 58 to 62 is the standard for quality and impact-rated bits.</p>
 
 <p>Knowing your drive types turns "which screwdriver is this?" into a ten-second check, and keeps every screw head intact.</p>
+    `
+    },
+    {
+        id: '22',
+        slug: 'torque-wrench-types-click-digital-beam-dial-guide',
+        title: 'Torque Wrench Types Explained: Click vs. Digital vs. Split-Beam vs. Dial',
+        excerpt: 'Identify every torque wrench type: click, digital, split-beam and dial. Compare ISO 6789 accuracy, Cr-V steel hardness, calibration intervals and correct use to tighten fasteners precisely.',
+        date: 'November 19, 2026',
+        author: 'Isuru',
+        keywords: ['torque wrench types','click vs digital torque wrench','torque wrench calibration','ISO 6789','how to use a torque wrench','ToolScan app'],
+        relatedPostIds: ['11', '20', '21'],
+        content: `
+<p>A <strong>torque wrench</strong> is a calibrated hand tool that tightens a nut or bolt to a specific, measurable torque, usually expressed in newton-metres (N·m) or foot-pounds (ft·lb). The four main types are click (micrometer), digital (electronic), split-beam, and dial. Each one tells you when the target torque is reached in a different way: an audible click, a beep, a flexing pointer, or a needle on a gauge. Accuracy is typically ±4% for click wrenches and ±1% to ±2% for digital models, as defined by ISO 6789.</p>
+
+<figure>
+
+<img src="/assets/blog/wrench-types-illustration.jpg" alt="Hand-drawn technical illustration of wrenches and sockets used for tightening fasteners" />
+
+<figcaption>Figure 1: A torque wrench is a wrench with a measuring mechanism. Identifying the mechanism tells you how to read, store and calibrate it.</figcaption>
+
+</figure>
+
+<h2>Why Torque Matters</h2>
+
+<p>A bolt works like a stiff spring. Tightening it stretches the shank slightly, and that stretch creates the clamping force that holds the joint together. Too little torque and the joint loosens under vibration. Too much and the bolt yields, the threads strip, or the part warps. Cylinder heads, wheel lugs, bicycle carbon seat posts and aircraft hardware all specify a torque for this reason.</p>
+
+<p>Roughly 90% of the torque you apply is lost to friction under the head and in the threads. Only about 10% becomes bolt tension. That is why lubricated and dry threads can give very different clamp loads at the same wrench setting, and why manufacturers state whether the value is for dry or oiled threads.</p>
+
+<h2>The Four Main Torque Wrench Types</h2>
+
+<h3>1. Click-Type (Micrometer) Torque Wrench</h3>
+
+<p>The most common type. A spring-loaded cam inside the tube releases when the preset torque is reached, giving a distinct click and a slight give in the handle. You set the value by rotating the handle against a micrometer-style scale.</p>
+
+<ul>
+<li><strong>Typical ranges:</strong> 5-25 N·m (bike), 20-100 N·m (general), 40-210 N·m (automotive), up to 750 N·m (heavy-duty)</li>
+<li><strong>Drive sizes:</strong> 1/4", 3/8", 1/2", 3/4" square drive</li>
+<li><strong>Accuracy:</strong> ±4% clockwise (ISO 6789 Type II Class A), often ±3% on better models</li>
+<li><strong>Weak point:</strong> The spring loses tension if stored under load, so always wind it down to the lowest setting after use</li>
+</ul>
+
+<h3>2. Digital (Electronic) Torque Wrench</h3>
+
+<p>A strain gauge in the shaft measures bending and a display shows live torque. Most beep, flash LEDs and vibrate as you approach the target.</p>
+
+<ul>
+<li><strong>Accuracy:</strong> ±1% to ±2% of reading</li>
+<li><strong>Features:</strong> Peak hold, unit switching (N·m, ft·lb, in·lb, kgf·m), memory of preset values, angle measurement</li>
+<li><strong>Weak point:</strong> Needs batteries and can drift if dropped. Strain gauges are sensitive to shock</li>
+</ul>
+
+<h3>3. Split-Beam Torque Wrench</h3>
+
+<p>A refinement of the click type. Instead of a single tube, a split-beam wrench uses a lever and pivot that releases at the set torque. The handle is positioned so force is always applied at the same point, which improves repeatability.</p>
+
+<ul>
+<li><strong>Accuracy:</strong> ±3% to ±4%, with better repeatability at low settings</li>
+<li><strong>Use:</strong> Professional shops that cannot afford creep from long-term spring pressure</li>
+</ul>
+
+<h3>4. Dial (Deflecting Beam) Torque Wrench</h3>
+
+<p>A steel beam flexes under load, and a pointer or dial gauge reads the deflection. There is no spring to wear out, so it stays accurate for years.</p>
+
+<ul>
+<li><strong>Accuracy:</strong> ±2% to ±3% of full scale</li>
+<li><strong>Advantage:</strong> Simple, reliable, and reads torque through the whole motion, not only at one point</li>
+<li><strong>Weak point:</strong> You must watch the gauge while pulling, which is awkward in tight spaces</li>
+</ul>
+
+<h2>Specification Comparison</h2>
+
+<table>
+<thead><tr><th>Type</th><th>Typical Accuracy</th><th>Standard</th><th>Signal</th><th>Calibration Interval</th><th>Best Use</th></tr></thead>
+<tbody>
+<tr><td>Click (micrometer)</td><td>±4%</td><td>ISO 6789 Type II</td><td>Click and handle give</td><td>12 months or 5,000 cycles</td><td>Automotive, general</td></tr>
+<tr><td>Digital</td><td>±1% to ±2%</td><td>ISO 6789 Type I/II</td><td>Beep, LED, display</td><td>12 months</td><td>Aerospace, engines</td></tr>
+<tr><td>Split-beam</td><td>±3% to ±4%</td><td>ISO 6789 Type II</td><td>Click</td><td>12 months</td><td>Pro workshops</td></tr>
+<tr><td>Dial</td><td>±2% to ±3%</td><td>ISO 6789 Type I</td><td>Pointer on gauge</td><td>12 months</td><td>Fixed-range inspection</td></tr>
+</tbody>
+</table>
+
+<blockquote><p>ISO 6789 splits torque tools into Type I (indicating, like beam and dial) and Type II (setting, like click). Class A means adjustable, Class D means fixed value. Always check the maker's mark on the shaft.</p></blockquote>
+
+<h2>Metallurgy and Build Quality</h2>
+
+<p>Most quality torque wrench bodies are forged from <strong>chrome-vanadium (Cr-V) steel</strong>, heat-treated to about HRC 40-48 for the shaft, which needs some flex. Ratchet heads and drive squares are harder, around <strong>HRC 50-56</strong>, so they resist wear at the square drive. A chrome plating or black oxide finish protects against corrosion. Reputable brands stamp their ISO 6789 conformity and a serial number so you can trace calibration certificates.</p>
+
+<p>A quick quality check: look at the head. A forged, one-piece head with a smooth, even grain is stronger than a cast head with visible seams.</p>
+
+<h2>How to Identify a Torque Wrench</h2>
+
+<ol>
+<li><strong>Scale markings:</strong> Numbers on the handle or a dial face with units like N·m, ft·lb or in·lb.</li>
+<li><strong>Adjustable handle:</strong> A twist-lock collar at the base of the handle usually means click type.</li>
+<li><strong>Display and buttons:</strong> A screen means digital.</li>
+<li><strong>Gauge or pointer:</strong> A needle and scale mean dial or deflecting beam.</li>
+<li><strong>Range:</strong> The range printed on the tool tells you the sweet spot. Use between 20% and 100% of the range for best accuracy, and never below 20%.</li>
+</ol>
+
+<p>If you inherited a tool with no clear markings, a quick scan in ToolScan can identify the type and typical use.</p>
+
+<blockquote><p><strong>Identify any tool with ToolScan.</strong> Found an unmarked wrench, a mystery gauge or a tool you cannot name? Point your phone camera at it and ToolScan identifies it in seconds.</p><p><strong><a href="https://apps.apple.com/lk/app/toolscan-tool-identifier/id6751974282" target="_blank" rel="noopener noreferrer">Download ToolScan on the App Store</a></strong> | <strong><a href="https://play.google.com/store/apps/details?id=com.circular.tool_identifier_app&amp;hl=en" target="_blank" rel="noopener noreferrer">Get it on Google Play</a></strong></p></blockquote>
+
+<h2>How to Use a Torque Wrench Correctly</h2>
+
+<ol>
+<li><strong>Clean the threads.</strong> Dirt and rust add friction and falsify the reading.</li>
+<li><strong>Set the value.</strong> For click wrenches, unlock the collar and rotate to the specified number. Lock it again.</li>
+<li><strong>Pull smoothly.</strong> Hold the center of the handle, not the end, and pull in a steady motion. Jerking makes you overshoot.</li>
+<li><strong>Stop at the click.</strong> Do not keep pulling after the click, and never use the wrench to loosen bolts.</li>
+<li><strong>Use the right torque pattern.</strong> For multi-bolt flanges and wheels, tighten in a star or criss-cross pattern in at least two or three passes (for example 30%, 60%, then 100%).</li>
+<li><strong>Store it relaxed.</strong> Wind a click wrench back to its lowest setting, but not to zero.</li>
+</ol>
+
+<h3>Extensions and Adapters</h3>
+
+<p>Adding a crowfoot or extension changes the effective lever arm. A 6-inch crowfoot in line with the wrench lengthens the reach and increases the real torque at the fastener. The corrected setting is:</p>
+
+<p><strong>Set value = Target torque × L ÷ (L + E)</strong></p>
+
+<p>where L is the wrench length from the drive square to the handle center, and E is the added length in the same units. Straight extensions that stay in line with the wrench do not need correction.</p>
+
+<h2>Calibration and Care</h2>
+
+<p>The rule of thumb is annual calibration, or every 5,000 cycles, whichever comes first. Calibrate immediately if the wrench has been dropped, used above its range, or stored fully wound. A good lab tests at 20%, 60% and 100% of range and issues a certificate traceable to national standards.</p>
+
+<p>Do not lubricate the internal mechanism of a click wrench. Oil can change the release point. Wipe the exterior with a dry cloth and keep it in its case.</p>
+
+<h2>Which One Should You Buy?</h2>
+
+<ul>
+<li><strong>Home mechanic or cyclist:</strong> A click-type in the 10-100 N·m range covers most jobs.</li>
+<li><strong>Engine builder:</strong> Digital, for fine resolution and angle readout.</li>
+<li><strong>Fleet shop:</strong> Split-beam or high-quality click, with a calibration schedule.</li>
+<li><strong>Inspection and low-volume critical joints:</strong> Dial wrench, because it has no spring to drift.</li>
+</ul>
+
+<p>Many pros own two: a 3/8" drive for lower torques up to about 80 N·m and a 1/2" drive for lug nuts and suspension bolts.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is the difference between a click and a digital torque wrench?</h3>
+
+<p>A click wrench releases a spring at the preset torque and clicks. A digital wrench measures torque with a strain gauge and shows it on a display. Digital is more accurate, click is cheaper and needs no battery.</p>
+
+<h3>How accurate is a torque wrench?</h3>
+
+<p>Click wrenches are typically ±4% and digital ±1% to ±2% under ISO 6789.</p>
+
+<h3>Can I use a torque wrench to loosen bolts?</h3>
+
+<p>No. Loosening can exceed the wrench's range and damage the mechanism.</p>
+
+<h3>How often should a torque wrench be calibrated?</h3>
+
+<p>Every 12 months or 5,000 cycles, and after any drop or overload.</p>
+
+<h3>Should I store a torque wrench at zero?</h3>
+
+<p>No. Store click wrenches at their lowest marked value so the spring is relaxed but the mechanism stays in tension.</p>
+
+<p>Knowing which torque wrench you have, and how to read and care for it, is the difference between a joint that holds for decades and one that fails in a season.</p>
     `
     }
 ];

@@ -308,7 +308,15 @@ async function run() {
       date: '2026-11-16',
       author: 'Isuru',
       keywords: ['fastener drive types', 'torx vs phillips', 'robertson vs phillips', 'pozidriv vs phillips', 'screw head identification', 'ToolScan app'],
-      relatedPostIds: ['11', '10', '20']
+      relatedPostIds: ['11', '10', '20', '22']
+    },
+    'torque-wrench-types-click-digital-beam-dial-guide': {
+      slug: 'torque-wrench-types-click-digital-beam-dial-guide',
+      excerpt: 'Identify every torque wrench type: click, digital, split-beam and dial. Compare ISO 6789 accuracy, Cr-V steel hardness, calibration intervals and correct use to tighten fasteners precisely.',
+      date: '2026-11-19',
+      author: 'Isuru',
+      keywords: ['torque wrench types','click vs digital torque wrench','torque wrench calibration','ISO 6789','how to use a torque wrench','ToolScan app'],
+      relatedPostIds: ['11', '20', '21']
     }
   };
 
